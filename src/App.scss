@@ -1,0 +1,144 @@
+// Library
+
+/***********
+VARIABLES
+***********/
+
+:root {
+  // color
+  --anemo-color: #54e7c0;
+  --font-color: white;
+  --bg-color: black;
+  --p-color: rgb(216, 216, 216);
+  --a-inactive: gray;
+  // font size
+  --h1-size: 3.8rem;
+  --a-size: 1.2rem;
+  --p-size: 1.2rem;
+  // line height
+  --title-line-8: 8rem;
+  --text-line-8: 2rem;
+  // width
+  --width-text-container: 40rem;
+}
+
+[data-theme="light"] {
+  --font-color: black;
+  --bg-color: ;
+  // font size
+  --h1-size: 3.8rem;
+}
+
+/***********
+ FONTS 
+ ***********/
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/WorkSans-Regular.woff2") format("woff2"),
+    url("assets/fonts/WorkSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("assets/fonts/WorkSans-Bold.woff2") format("woff2"),
+    url("assets/fonts/WorkSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/***********
+ BASE 
+ ***********/
+html {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 62.5%;
+  font-family: "Work Sans";
+}
+
+/***********
+ TYPOGRAPHY 
+ ***********/
+
+// Title
+h1 {
+  font-size: var(--h1-size);
+  color: var(--font-color);
+  text-transform: uppercase;
+  line-height: var(--title-line-8);
+}
+
+// Link
+a {
+  font-size: var(--a-size);
+  color: var(--a-inactive);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-transform: uppercase;
+  transition: color 0.5s;
+  &:hover {
+    color: var(--anemo-color);
+  }
+  &.active {
+    color: var(--anemo-color);
+  }
+}
+
+// body text
+p {
+  color: var(--p-color);
+  font-size: var(--p-size);
+  line-height: var(--text-line-8);
+}
+
+// Home
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem 20rem 0rem 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 5rem);
+    // background-color: blue;
+    .visual {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      height: 100%;
+      padding-bottom: 10rem;
+    }
+  }
+}
