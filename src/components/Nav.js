@@ -1,7 +1,15 @@
 // import AnemoComponent from './Anemo'
 import { Link } from "@reach/router"
-import { Anemo } from 'genshin-icon'
 import './Nav.scss'
+
+// LOGO TYPES
+import { Anemo } from 'genshin-icon'
+import { Geo } from 'genshin-icon'
+import { Electro } from 'genshin-icon'
+import { Dendro } from 'genshin-icon'
+import { Hydro } from 'genshin-icon'
+import { Pyro } from 'genshin-icon'
+import { Cryo } from 'genshin-icon'
 
 function Nav() {
   return (

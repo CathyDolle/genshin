@@ -5209,9 +5209,9 @@ gaze@^1.0.0:
     globule "^1.0.0"
 
 genshin-icon@^1.0.1:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/genshin-icon/-/genshin-icon-1.0.6.tgz#4b95920789c872debcc475a678fd680ac56c8da3"
-  integrity sha512-mm9b6LszoG/IIwvcGunsG/d4iZt6SnbvjWnLLf+/3xrijvYoBnfBEusfeZ5zkfRGve8nacmKlpsGaJlZDMZ0OA==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/genshin-icon/-/genshin-icon-1.0.7.tgz#388339b88055674b5ea235508b57dd160783aa95"
+  integrity sha512-rZs8wo+/rwX11XqNfXLgfu2Ut07Za/8mbNMSMQQi1VYN+wL1xdhfnpIaOSe5GSaJq3zxHfoPflhZrTn1ABKusg==
   dependencies:
     react "^17.0.1"
 

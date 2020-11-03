@@ -10,7 +10,7 @@ VARIABLES
   --font-color: white;
   --bg-color: black;
   --p-color: rgb(216, 216, 216);
-  --a-inactive: gray;
+  --inactive: rgb(73, 73, 73);
   // font size
   --h1-size: 3.8rem;
   --a-size: 1.2rem;
@@ -85,7 +85,7 @@ h1 {
 // Link
 a {
   font-size: var(--a-size);
-  color: var(--a-inactive);
+  color: var(--inactive);
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: 200;
@@ -106,39 +106,3 @@ p {
   line-height: var(--text-line-8);
 }
 
-// Home
-
-.wrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  padding: 4rem 20rem 0rem 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .container {
-    display: flex;
-    width: 100%;
-    height: calc(100% - 5rem);
-    // background-color: blue;
-    .visual {
-      position: relative;
-      width: 50%;
-      height: 100%;
-      img {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 50%;
-      height: 100%;
-      padding-bottom: 10rem;
-    }
-  }
-}
