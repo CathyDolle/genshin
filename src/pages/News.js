@@ -4,21 +4,21 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import lisa from "../assets/images/char/lisa.png"
+import xiao from "../assets/images/char/xiao.png"
 import chibiMap from "../assets/images/chibi/chibiMap.png"
 import chibiTimer from "../assets/images/chibi/chibiTimer.png"
 
-function Indispensables() {
+function News() {
   return (
     <Wrapper>
-      <Visual srcLeft={lisa} height="95%" />
+      <Visual srcLeft={xiao} height="95%"/>
       <Content>
         <TextContent
-          title="Map interactive"
-          hrefName="▶ Voir la map"
-          href="https://www.genshin-impact.fr/map/"
+          title="Nouveauté de la 1.1"
+          hrefName="▶ Regarder le trailer"
+          href="https://twitter.com/Genshin_7/status/1322148834001129473"
           src={chibiMap}
-          text="Une map interactive pour voir le spot de chaque ressource"
+          text="La maj est prévue pour le 11 novembre, aucune région n'a été annoncée. Pour plus d'infos :"
         />
 
         <TextContent
@@ -34,4 +34,4 @@ function Indispensables() {
   )
 }
 
-export default Indispensables
+export default News

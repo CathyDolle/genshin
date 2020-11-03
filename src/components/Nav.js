@@ -19,11 +19,7 @@ function Nav() {
       <NavLink to="/guides">Guides</NavLink>
       <NavLink to="/dailies">Dailies</NavLink>
       <NavLink to="/indispensables">Indispensables</NavLink>
-      <NavLink to="/">News</NavLink>
-      <p>
-        LAST UPDATE <br />
-        03/11/2020
-      </p>
+      <NavLink to="/news">News</NavLink>
     </nav>
   )
 }

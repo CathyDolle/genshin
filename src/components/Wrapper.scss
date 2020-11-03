@@ -40,7 +40,6 @@
       position: relative;
       width: 50%;
       height: 100%;
- 
       img.right {
         position: absolute;
         right: 0;
@@ -51,11 +50,27 @@
       }
       img.left {
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 0;
         animation-name: charAnimationLeft;
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
+      }
+      img.xiao{
+          left: -5rem;
+      }
+      .shadow {
+        position: absolute;
+        bottom: 0;
+        left: calc(var(--wrapper-margin) * -1);
+        width: 100vw;
+        height: 30%;
+        pointer-events: none;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
       }
     }
     .content {
@@ -63,7 +78,7 @@
       flex-direction: column;
       justify-content: flex-start;
       width: 50%;
-      height: 50%;
+      height: 55%;
       //   padding-bottom: 10rem;
       overflow-y: scroll;
       &::-webkit-scrollbar {
@@ -93,11 +108,11 @@
 
 @keyframes charAnimationLeft {
   0% {
-    left: -50%;
+    left: -75%;
     opacity: 0;
   }
   100% {
-    left: -10%;
+    left: -45%;
     opacity: 1;
   }
 }

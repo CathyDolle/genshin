@@ -82,7 +82,7 @@ body {
 h1 {
   font-size: var(--h1-size);
   color: var(--font-color);
-  text-transform: uppercase;
+  // text-transform: uppercase;
   line-height: var(--title-line-8);
   letter-spacing: 0.1rem;
   margin-bottom: 2rem;
@@ -100,19 +100,6 @@ a {
   transition: color 0.5s;
   &:hover {
     color: var(--anemo-color);
-    &::after {
-      width: 2rem;
-    }
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: -0.4rem;
-    width: 0rem;
-    left: 0.05rem;
-    height: 0.1rem;
-    background: var(--anemo-color);
-    transition: width 0.5s;
   }
   &.active {
     color: var(--anemo-color);

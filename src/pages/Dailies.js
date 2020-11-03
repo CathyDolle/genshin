@@ -11,7 +11,7 @@ import razorCry from "../assets/images/chibi/razorCry.png"
 function Dailies() {
   return (
     <Wrapper>
-      <Visual srcLeft={paimon} height="90%" />
+      <Visual srcLeft={paimon} height="95%" />
       <Content>
         <TextContent
           title="Welcome"

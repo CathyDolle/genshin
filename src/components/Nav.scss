@@ -10,6 +10,19 @@ nav {
   //   background: red;
   a {
     margin-right: 3.5rem;
+    &:hover::after {
+      width: 2rem;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -0.4rem;
+      width: 0rem;
+      left: 0.05rem;
+      height: 0.1rem;
+      background: var(--anemo-color);
+      transition: width 0.5s;
+    }
   }
   p {
     // margin-top: 1.5rem;

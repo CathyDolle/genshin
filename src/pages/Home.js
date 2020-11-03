@@ -15,14 +15,13 @@ function Home() {
         <TextContent
           title="Welcome"
           src={jeanHeart}
-          text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea."
+          text="Dernier update : 03/11/2020"
         />
         <TextContent
           title="Coupons"
           text="Pas de code cette semaine :("
           //   href="https://genshin.mihoyo.com/fr/gift"
-          linkName="ici"
-          target="_blank"
+          hrefName="ici"
           //   src={jeanHeart}
           src={razorCry}
         />

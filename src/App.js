@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Guides from "./pages/Guides"
 import Dailies from "./pages/Dailies"
 import Indispensables from "./pages/Indispensables"
+import News from "./pages/News"
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/indispensables">
           <Indispensables />
+        </Route>
+        <Route path="/news">
+          <News />
         </Route>
       </Switch>
     </Router>
