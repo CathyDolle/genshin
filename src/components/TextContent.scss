@@ -4,22 +4,24 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 5rem;
-  p {
-    margin-left: 1.5rem;
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      width: 0.3rem;
-      background: var(--anemo-color);
-      top: 0.4rem;
-      height: calc(100% - 0.8rem);
-      //   top: 10%;
-      left: -1.5rem;
+  &_section {
+    width: 100%;
+    display: flex;
+    border-left: solid 0.3rem var(--anemo-color);
+    padding-left: 1.5rem;
+    img {
+      width: 10rem;
+      height: 10rem;
+      margin-right: 1.5rem;
+      border-radius: 0.5rem;
     }
-  }
-  a{
-    color: var(--anemo-color);
-    font-weight: 700;
+    p {
+      position: relative;
+      text-align: justify;
+    }
+    a {
+      color: var(--anemo-color);
+      font-weight: 700;
+    }
   }
 }

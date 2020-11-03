@@ -14,9 +14,9 @@ import { Cryo } from 'genshin-icon'
 function Nav() {
   return (
     <section className="nav">
-        <Anemo className="logo" size="40" color="white"/>
+        <Anemo className="logo" size="40" color="var(--anemo-color)"/>
         <Link className="active" to="/">Home</Link>
-        <Link to="/">Guides</Link>
+        <Link to="/guides">Guides</Link>
         <Link to="/">Dailies</Link>
         <Link to="/">Indispensables</Link>
         <Link to="/">News</Link>

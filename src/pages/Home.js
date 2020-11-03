@@ -4,7 +4,9 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import Jean from "../assets/images/char/jean.png"
+import jean from "../assets/images/char/jean.png"
+import jeanHeart from "../assets/images/chibi/jeanHeart.png"
+import razorCry from "../assets/images/chibi/razorCry.png"
 
 function Home() {
   return (
@@ -16,14 +18,15 @@ function Home() {
         />
         <TextContent
           title="Coupons"
-          text="Profitez de 160 primos gemmes en
-            Rentrant le code GENSHINR70 "
-          href="https://genshin.mihoyo.com/fr/gift"
+          text="Pas de code cette semaine :("
+          //   href="https://genshin.mihoyo.com/fr/gift"
           linkName="ici"
           target="_blank"
+          //   src={jeanHeart}
+          src={razorCry}
         />
       </Content>
-      <Visual src={Jean} height="90%" />
+      <Visual src={jean} height="90%" />
     </Wrapper>
   )
 }
