@@ -4,13 +4,14 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import jean from "../assets/images/char/jean.png"
+import paimon from "../assets/images/char/paimon.png"
 import jeanHeart from "../assets/images/chibi/jeanHeart.png"
 import razorCry from "../assets/images/chibi/razorCry.png"
 
-function Home() {
+function Dailies() {
   return (
     <Wrapper>
+      <Visual srcLeft={paimon} height="90%" />
       <Content>
         <TextContent
           title="Welcome"
@@ -27,9 +28,8 @@ function Home() {
           src={razorCry}
         />
       </Content>
-      <Visual srcRight={jean} height="100%" />
     </Wrapper>
   )
 }
 
-export default Home
+export default Dailies

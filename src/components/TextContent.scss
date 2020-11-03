@@ -4,6 +4,9 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 5rem;
+  animation-name: fadeAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   &_section {
     width: 100%;
     display: flex;
@@ -18,10 +21,34 @@
     p {
       position: relative;
       text-align: justify;
+      display: block;
     }
     a {
       color: var(--anemo-color);
       font-weight: 700;
+      text-transform: initial;
+      letter-spacing: 0;
+      display: block;
+      margin-top: 0.2rem;
+      transition: color 1s;
     }
+  }
+  img.banner {
+    margin-top: 3rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+// animation text
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+    // transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    // transform: translateX(0%);
   }
 }

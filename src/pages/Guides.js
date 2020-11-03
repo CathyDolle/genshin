@@ -4,9 +4,10 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import jean from "../assets/images/char/jean.png"
+import abyss from "../assets/images/banner/abyss.png"
 import chibiGuide from "../assets/images/chibi/chibiGuide.png"
-import razorCry from "../assets/images/chibi/razorCry.png"
+import chibiAbyss from "../assets/images/chibi/chibiAbyss.png"
+import guide from "../assets/images/banner/guide.png"
 
 function Guides() {
   return (
@@ -15,14 +16,21 @@ function Guides() {
         <TextContent
           title="Guide du débutant"
           src={chibiGuide}
-          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire."
+          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire.
+          "
+          banner={guide}
+          toName="Lire le guide"
+          to="/"
         />
       </Content>
       <Content>
         <TextContent
           title="Guide des abysses"
-          src={chibiGuide}
-          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire."
+          src={chibiAbyss}
+          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire. "
+          banner={abyss}
+          toName="Lire le guide"
+          to="/"
         />
       </Content>
     </Wrapper>

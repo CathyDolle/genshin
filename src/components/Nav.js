@@ -1,27 +1,30 @@
 // import AnemoComponent from './Anemo'
-import { Link } from "@reach/router"
-import './Nav.scss'
+import { NavLink } from "react-router-dom"
+import "./Nav.scss"
 
 // LOGO TYPES
-import { Anemo } from 'genshin-icon'
-import { Geo } from 'genshin-icon'
-import { Electro } from 'genshin-icon'
-import { Dendro } from 'genshin-icon'
-import { Hydro } from 'genshin-icon'
-import { Pyro } from 'genshin-icon'
-import { Cryo } from 'genshin-icon'
+import { Anemo } from "genshin-icon"
+import { Geo } from "genshin-icon"
+import { Electro } from "genshin-icon"
+import { Dendro } from "genshin-icon"
+import { Hydro } from "genshin-icon"
+import { Pyro } from "genshin-icon"
+import { Cryo } from "genshin-icon"
 
 function Nav() {
   return (
-    <section className="nav">
-        <Anemo className="logo" size="40" color="var(--anemo-color)"/>
-        <Link className="active" to="/">Home</Link>
-        <Link to="/guides">Guides</Link>
-        <Link to="/">Dailies</Link>
-        <Link to="/">Indispensables</Link>
-        <Link to="/">News</Link>
-        <p>LAST UPDATE <br/>03/11/2020</p>
-    </section>
+    <nav>
+      <Anemo className="logo" size="40" color="var(--anemo-color)" />
+      <NavLink exact to="/">Home</NavLink>
+      <NavLink to="/guides">Guides</NavLink>
+      <NavLink to="/dailies">Dailies</NavLink>
+      <NavLink to="/indispensables">Indispensables</NavLink>
+      <NavLink to="/">News</NavLink>
+      <p>
+        LAST UPDATE <br />
+        03/11/2020
+      </p>
+    </nav>
   )
 }
 

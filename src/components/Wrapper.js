@@ -13,7 +13,7 @@ import { Cryo } from 'genshin-icon'
 function Wrapper(props) {
   return (
     <section className="wrapper">
-      <Anemo className="watermark" size="40%" color="var(--anemo-color)"/>
+      <Anemo className="watermark" size="35%" color="var(--anemo-color)"/>
       <Nav />
       <div className="container">
         {props.children}

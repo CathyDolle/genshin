@@ -15,14 +15,15 @@ VARIABLES
   --geo-color: #bbe754;
   --pyro-color: #fd6f15;
   // font size
-  --h1-size: 3.6rem;
+  --h1-size: 3.4rem;
   --a-size: 1.2rem;
   --p-size: 1.2rem;
   // line height
-  --title-line-8: 8rem;
+  --title-line-8: 4rem;
   --text-line-8: 2rem;
   // width
-  --width-text-container: 40rem;
+  --width-text-container: 70%;
+  --wrapper-margin : 20rem;
 }
 
 [data-theme="light"] {
@@ -83,10 +84,13 @@ h1 {
   color: var(--font-color);
   text-transform: uppercase;
   line-height: var(--title-line-8);
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
 }
 
 // Link
 a {
+  position: relative;
   font-size: var(--a-size);
   color: var(--inactive);
   text-decoration: none;
@@ -96,6 +100,19 @@ a {
   transition: color 0.5s;
   &:hover {
     color: var(--anemo-color);
+    &::after {
+      width: 2rem;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -0.4rem;
+    width: 0rem;
+    left: 0.05rem;
+    height: 0.1rem;
+    background: var(--anemo-color);
+    transition: width 0.5s;
   }
   &.active {
     color: var(--anemo-color);

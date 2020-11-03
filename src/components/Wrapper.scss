@@ -4,7 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 4rem 20rem 0rem 20rem;
+  padding: 4rem var(--wrapper-margin) 0rem var(--wrapper-margin);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,7 @@
   }
   .container {
     display: flex;
+    align-items: center;
     width: 100%;
     height: calc(100% - 5rem);
     // background-color: blue;
@@ -39,11 +40,20 @@
       position: relative;
       width: 50%;
       height: 100%;
-      img {
+ 
+      img.right {
         position: absolute;
         right: 0;
         bottom: 0;
-        animation-name: charAnimation;
+        animation-name: charAnimationRight;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+      }
+      img.left {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        animation-name: charAnimationLeft;
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
       }
@@ -51,11 +61,14 @@
     .content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-top: 5rem;
+      justify-content: flex-start;
       width: 50%;
-      height: 100%;
-      padding-bottom: 10rem;
+      height: 50%;
+      //   padding-bottom: 10rem;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   footer {
@@ -67,13 +80,24 @@
   }
 }
 
-@keyframes charAnimation {
+@keyframes charAnimationRight {
   0% {
     transform: translateX(50%);
     opacity: 0;
   }
   100% {
     transform: translateX(20%);
+    opacity: 1;
+  }
+}
+
+@keyframes charAnimationLeft {
+  0% {
+    left: -50%;
+    opacity: 0;
+  }
+  100% {
+    left: -10%;
     opacity: 1;
   }
 }
