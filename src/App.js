@@ -5,6 +5,8 @@ import Guides from "./pages/Guides"
 import Dailies from "./pages/Dailies"
 import Indispensables from "./pages/Indispensables"
 import News from "./pages/News"
+import GuideDebutant from "./pages/GuideDebutant"
+import GuideAbyss from "./pages/GuideAbyss"
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
         </Route>
         <Route path="/news">
           <News />
+        </Route>
+        <Route path="/guidedebutant">
+          <GuideDebutant />
+        </Route>
+        <Route path="/guideabyss">
+          <GuideAbyss />
         </Route>
       </Switch>
     </Router>

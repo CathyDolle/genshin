@@ -11,7 +11,7 @@ import chibiTimer from "../assets/images/chibi/chibiTimer.png"
 function News() {
   return (
     <Wrapper>
-      <Visual srcLeft={xiao} height="95%"/>
+      <Visual srcLeft={xiao} height="95%" />
       <Content>
         <TextContent
           title="Nouveauté de la 1.1"
@@ -23,6 +23,15 @@ function News() {
 
         <TextContent
           title="Timer"
+          text="Pour voir le temps de respawn des ressources"
+          //   href="https://genshin.mihoyo.com/fr/gift"
+          toName="▶ Voir les timers"
+          to="/"
+          src={chibiTimer}
+        />
+
+        <TextContent
+          title="Test"
           text="Pour voir le temps de respawn des ressources"
           //   href="https://genshin.mihoyo.com/fr/gift"
           toName="▶ Voir les timers"

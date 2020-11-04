@@ -1,24 +1,23 @@
 import "./TextContent.scss"
 import { Link } from "react-router-dom"
 
-function TextContent(props) {
+function TextContent({title, src, text, to, toName, href, hrefName, banner }) {
   return (
     <section className="text_container">
-      <h1>{props.title}</h1>
+      <h1>{title.split('\n').map(entry => <>{entry}<br /></>)}</h1>
       <div className="text_container_section">
-        {props.src && <img src={props.src} alt="chibi"/>}
-        <p>
-          {props.text}
-          {props.to && <Link to={props.to}>{props.toName}</Link>}
-          {props.href && (
-            <a href={props.href} target="_blank" >
-              {props.hrefName}
+        {src && <img src={src} alt="chibi"/>}
+          <p>{text.split('\n').map(entry => <>{entry}<br /></>)}</p>
+          {text}
+          {to && <Link to={to}>{toName}</Link>}
+          {href && (
+            <a href={href} target="_blank" >
+              {hrefName}
             </a>
           )}
-        </p>
       </div>
-      {props.banner && (
-        <img className="banner" src={props.banner} alt="banner"/>
+      {banner && (
+        <Link to={to}><img className="banner" src={banner} alt="banner"/></Link>
       )}
     </section>
   )

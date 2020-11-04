@@ -20,7 +20,7 @@ function Guides() {
           "
           banner={guide}
           toName="Lire le guide"
-          to="/"
+          to="/guidedebutant"
         />
       </Content>
       <Content>
@@ -30,7 +30,7 @@ function Guides() {
           text="Retrouve tout plein d'astuces et des erreurs à ne pas faire. "
           banner={abyss}
           toName="Lire le guide"
-          to="/"
+          to="/guideabyss"
         />
       </Content>
     </Wrapper>

@@ -4,19 +4,19 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import paimon from "../assets/images/char/paimon.png"
-import chibiWow from "../assets/images/chibi/chibiWow.png"
+import principal from "../assets/images/char/principal.png"
+import amberWow from "../assets/images/chibi/amberWow.png"
 import razorCry from "../assets/images/chibi/razorCry.png"
 
-function Dailies() {
+function GuideDebutant() {
   return (
     <Wrapper>
-      <Visual srcLeft={paimon} height="95%" />
+      <Visual srcLeft={principal} height="95%" />
       <Content>
         {/* LEVELING */}
         <TextContent
           title="Les voeux"
-          src={chibiWow}
+          src={amberWow}
           text="Soyez curieux blabla ouvrez les coffres"
         />
         <TextContent
@@ -33,4 +33,4 @@ function Dailies() {
   )
 }
 
-export default Dailies
+export default GuideDebutant

@@ -1,22 +1,22 @@
 import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import Visual from "../components/Visual"
+import Content from "../components/Content"
+import TextContent from "../components/TextContent"
 
 // CHAR
-import paimon from "../assets/images/char/paimon.png"
-import chibiWow from "../assets/images/chibi/chibiWow.png"
+import sucrose from "../assets/images/char/sucrose.png"
+import amberWow from "../assets/images/chibi/amberWow.png"
 import razorCry from "../assets/images/chibi/razorCry.png"
 
-function Dailies() {
+function GuideAbyss() {
   return (
     <Wrapper>
-      <Visual srcLeft={paimon} height="95%" />
+      <Visual srcLeft={sucrose} height="90%" />
       <Content>
         {/* LEVELING */}
         <TextContent
-          title="Les voeux"
-          src={chibiWow}
+          title="Mobs etc."
+          src={amberWow}
           text="Soyez curieux blabla ouvrez les coffres"
         />
         <TextContent
@@ -33,4 +33,4 @@ function Dailies() {
   )
 }
 
-export default Dailies
+export default GuideAbyss
