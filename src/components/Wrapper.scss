@@ -29,6 +29,11 @@
     .elements {
       margin: 1rem 0;
       cursor: pointer;
+      fill: var(--anemo-color);
+      transition-duration: fill 1s;
+      &:hover {
+        color: var(--active);
+      }
     }
   }
   .container {

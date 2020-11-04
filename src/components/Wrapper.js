@@ -1,21 +1,27 @@
-import React from "react"
+import React, { useContext } from "react"
 import Elements from "./Elements"
 import "./Wrapper.scss"
 import Nav from "./Nav"
-import { Anemo } from "genshin-icon"
+import colorContext from "../contexts/color"
+import { elements } from "./Elements"
 
 function Wrapper(props) {
+  const { current } = useContext(colorContext)
+  const CurrentElement = elements.find(({ name }) => current === name)
+
   return (
     <section className="wrapper">
-      <Anemo className="watermark" size="35%" color="var(--anemo-color)"/>
+      <CurrentElement.Component
+        className="watermark"
+        size="35%"
+        color={CurrentElement.color}
+      />
       <Nav />
-      <div className="container">
-        {props.children}
-      </div>
-      <Elements/>
+      <div className="container">{props.children}</div>
+      <Elements />
       <div className="shadow"></div>
       <footer>
-          <p>copyright machin truc</p>
+        <p>copyright machin truc</p>
       </footer>
     </section>
   )

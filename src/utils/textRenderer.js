@@ -1,3 +1,11 @@
-const renderWithNextLine = text => text.split('\n').map(entry => <>{entry}<br /></>);
+import { Fragment } from "react"
 
-export { renderWithNextLine };
+const renderWithNextLine = (text) =>
+  text.split("\n").map((entry) => (
+    <Fragment key={entry}>
+      {entry}
+      <br />
+    </Fragment>
+  ))
+
+export { renderWithNextLine }

@@ -6,6 +6,11 @@ nav {
   .logo {
     margin-right: 3.5rem;
     cursor: pointer;
+    fill {
+      &:hover {
+        color: white;
+      }
+    }
   }
   //   background: red;
   a {
@@ -20,7 +25,7 @@ nav {
       width: 0rem;
       left: 0.05rem;
       height: 0.1rem;
-      background: var(--anemo-color);
+      background: var(--active);
       transition: width 0.5s;
     }
   }

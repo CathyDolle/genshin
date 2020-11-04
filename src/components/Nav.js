@@ -1,21 +1,29 @@
-// import AnemoComponent from './Anemo'
-import { NavLink } from "react-router-dom"
+import { useContext } from "react"
+import { NavLink, useHistory } from "react-router-dom"
 import "./Nav.scss"
-
-// LOGO TYPES
-import { Anemo } from "genshin-icon"
-import { Geo } from "genshin-icon"
-import { Electro } from "genshin-icon"
-import { Dendro } from "genshin-icon"
-import { Hydro } from "genshin-icon"
-import { Pyro } from "genshin-icon"
-import { Cryo } from "genshin-icon"
+import colorContext from "../contexts/color"
+import { elements } from "./Elements"
 
 function Nav() {
+  const { current } = useContext(colorContext)
+  const CurrentElement = elements.find(({ name }) => current === name)
+  const history = useHistory()
+
+  const handleClick = () => {
+    history.push("/")
+  }
+
   return (
     <nav>
-      <Anemo className="logo" size="40" color="var(--anemo-color)" />
-      <NavLink exact to="/">Home</NavLink>
+      <CurrentElement.Component
+        className="logo"
+        size="40"
+        color={CurrentElement.color}
+        onClick={handleClick}
+      />
+      <NavLink exact to="/">
+        Home
+      </NavLink>
       <NavLink to="/guides">Guides</NavLink>
       <NavLink to="/dailies">Dailies</NavLink>
       <NavLink to="/indispensables">Indispensables</NavLink>

@@ -10,10 +10,15 @@ VARIABLES
   --bg-color: black;
   --p-color: rgb(216, 216, 216);
   --inactive: rgb(73, 73, 73);
+  --active: #54e7c0;
   // color elements
   --anemo-color: #54e7c0;
-  --geo-color: #bbe754;
+  --geo-color: #f1bc01;
+  --electro-color: #d38ff8;
+  --dendro-color: #a2ee00;
+  --hydro-color: #00e7ff;
   --pyro-color: #fd6f15;
+  --cryo-color: #bff5f5;
   // font size
   --h1-size: 3.4rem;
   --a-size: 1.2rem;
@@ -23,8 +28,8 @@ VARIABLES
   --text-line-8: 2rem;
   // width
   --width-text-container: 70%;
-  --wrapper-margin : 4rem 20rem 0rem 20rem;
-  --wrapper-margin-1400 : 4rem 8rem 0rem 8rem;
+  --wrapper-margin: 4rem 20rem 0rem 20rem;
+  --wrapper-margin-1400: 4rem 8rem 0rem 8rem;
 }
 
 [data-theme="light"] {
@@ -101,10 +106,10 @@ a {
   text-transform: uppercase;
   transition: color 0.5s;
   &:hover {
-    color: var(--anemo-color);
+    color: var(--active);
   }
   &.active {
-    color: var(--anemo-color);
+    color: var(--active);
   }
 }
 
