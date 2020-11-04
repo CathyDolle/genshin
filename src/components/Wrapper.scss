@@ -11,8 +11,10 @@
   align-items: center;
   overflow: hidden;
   .watermark {
+    animation-name: fadeElementAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     position: absolute;
-    opacity: 0.1;
     z-index: -2;
   }
   .elements_container {
@@ -21,18 +23,23 @@
     right: 0rem;
     height: 100%;
     width: 20rem;
-    //   background: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     .elements {
+      z-index:100;
       margin: 1rem 0;
       cursor: pointer;
-      fill: var(--anemo-color);
-      transition-duration: fill 1s;
+      transition: filter 0.8s;
+      opacity: 1;
+    }
+    .elements_inactive {
+      filter: contrast(0);
+      opacity: 0.4;
       &:hover {
-        color: var(--active);
+        filter: none;
+        opacity: 1;
       }
     }
   }
@@ -102,24 +109,33 @@
   }
 }
 
+@keyframes fadeElementAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
 @keyframes charAnimationRight {
   0% {
     transform: translateX(30%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(10%);
     opacity: 1;
   }
 }
 
 @keyframes charAnimationLeft {
   0% {
-    left: -75%;
+    left: 0%;
     opacity: 0;
   }
   100% {
-    left: -45%;
+    left: 0%;
     opacity: 1;
   }
 }
