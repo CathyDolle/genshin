@@ -4,7 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 4rem var(--wrapper-margin) 0rem var(--wrapper-margin);
+  padding: var(--wrapper-margin);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +13,7 @@
   .watermark {
     position: absolute;
     opacity: 0.1;
+    z-index: -2;
   }
   .elements_container {
     position: absolute;
@@ -38,6 +39,7 @@
     // background-color: blue;
     .visual {
       position: relative;
+      pointer-events: none;
       width: 50%;
       height: 100%;
       img.right {
@@ -56,27 +58,14 @@
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
       }
-      img.xiao{
-          left: -5rem;
-      }
-      .shadow {
-        position: absolute;
-        bottom: 0;
-        left: calc(var(--wrapper-margin) * -1);
-        width: 100vw;
-        height: 30%;
-        pointer-events: none;
-        background: linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
+      img.xiao {
+        left: -5rem;
       }
     }
     .content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       width: 50%;
       height: 55%;
       //   padding-bottom: 10rem;
@@ -92,6 +81,19 @@
     p {
       color: var(--inactive);
     }
+  }
+  .shadow {
+    position: absolute;
+    bottom: 0;
+    left: calc(var(--wrapper-margin) * -1);
+    width: 100vw;
+    height: 30%;
+    pointer-events: none;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 }
 

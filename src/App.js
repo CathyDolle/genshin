@@ -5,8 +5,11 @@ import Guides from "./pages/Guides"
 import Dailies from "./pages/Dailies"
 import Indispensables from "./pages/Indispensables"
 import News from "./pages/News"
-import GuideDebutant from "./pages/GuideDebutant"
-import GuideAbyss from "./pages/GuideAbyss"
+import GuideDebutant from "./pages/Debutant"
+import GuideAbyss from "./pages/Abyss"
+
+// responsive
+import "./Responsive.scss"
 
 function App() {
   return (
@@ -15,7 +18,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/guides">
+        <Route exact path="/guides">
           <Guides />
         </Route>
         <Route path="/dailies">
@@ -27,10 +30,10 @@ function App() {
         <Route path="/news">
           <News />
         </Route>
-        <Route path="/guidedebutant">
+        <Route path="/guides/debutant">
           <GuideDebutant />
         </Route>
-        <Route path="/guideabyss">
+        <Route path="/guides/abyss">
           <GuideAbyss />
         </Route>
       </Switch>
@@ -39,3 +42,4 @@ function App() {
 }
 
 export default App
+

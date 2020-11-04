@@ -17,7 +17,6 @@ function Visual(props) {
           height={props.height}
         />
       )}
-      <div className="shadow"></div>
     </section>
   )
 }

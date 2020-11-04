@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1400px) {
+  .wrapper {
+    padding: var(--wrapper-margin-1400);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    // .elements_container {
+    //   width: 0;
+    // }
+    padding: var(--wrapper-margin);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .wrapper .container .visual {
+    height: 90%;
+    margin-top: auto;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .wrapper .container {
+    .content {
+      width: 80%;
+    }
+    .visual {
+      display: none;
+    }
+  }
+}

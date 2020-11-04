@@ -23,7 +23,8 @@ VARIABLES
   --text-line-8: 2rem;
   // width
   --width-text-container: 70%;
-  --wrapper-margin : 20rem;
+  --wrapper-margin : 4rem 20rem 0rem 20rem;
+  --wrapper-margin-1400 : 4rem 8rem 0rem 8rem;
 }
 
 [data-theme="light"] {
@@ -60,6 +61,7 @@ VARIABLES
  ***********/
 html {
   font-size: 62.5%;
+  user-select: none;
 }
 
 * {

@@ -13,6 +13,7 @@
     border-left: solid 0.3rem var(--anemo-color);
     padding-left: 1.5rem;
     img {
+      pointer-events: none;
       width: 10rem;
       height: 10rem;
       margin-right: 1.5rem;
@@ -31,8 +32,8 @@
       display: block;
       margin-top: 0.2rem;
       transition: color 1s;
-      &:hover{
-          color: var(--font-color);
+      &:hover {
+        color: var(--font-color);
       }
     }
   }
