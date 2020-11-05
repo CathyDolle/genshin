@@ -12,7 +12,7 @@ import razorCry from '../assets/images/chibi/razorCry.png';
 function GuideDebutant() {
   return (
     <Wrapper>
-      <Visual srcLeft={principal} height="95%" />
+      <Visual src={principal} position="left" height="95%" />
       <Content>
         {/* LEVELING */}
         <TextContent

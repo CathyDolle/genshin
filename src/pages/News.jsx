@@ -12,7 +12,7 @@ import chibiTimer from '../assets/images/chibi/chibiTimer.png';
 function News() {
   return (
     <Wrapper>
-      <Visual srcCustom={xiao} height="95%" />
+      <Visual src={xiao} position="xiao" height="95%" />
       <Content>
         <TextContent
           title="Nouveauté de la 1.1"
