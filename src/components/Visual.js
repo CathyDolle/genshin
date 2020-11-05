@@ -4,7 +4,8 @@ function Visual(props) {
   return (
     <section className="visual">
       {props.srcRight && (
-        <img
+        <FadeOutIn
+          time={4}
           className="right"
           src={props.srcRight}
           alt="visual"
