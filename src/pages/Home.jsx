@@ -29,7 +29,7 @@ function Home() {
           // src={razorCry}
         />
       </Content>
-      <Visual srcRight={CurrentElement.char} height="100%" />
+      <Visual src={CurrentElement.char} position="right" height="100%" />
     </Wrapper>
   );
 }
