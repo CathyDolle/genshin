@@ -1,3 +1,5 @@
+import FadeOutIn from "./FadeOutIn"
+
 function Visual(props) {
   return (
     <section className="visual">
@@ -10,7 +12,8 @@ function Visual(props) {
         />
       )}
       {props.srcLeft && (
-        <img
+        <FadeOutIn
+          time={4}
           className="left"
           src={props.srcLeft}
           alt="visual"
@@ -18,7 +21,8 @@ function Visual(props) {
         />
       )}
        {props.srcCustom && (
-        <img
+        <FadeOutIn
+          time={4}
           className="xiao"
           src={props.srcCustom}
           alt="visual"
