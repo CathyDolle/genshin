@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-function usePrevious(src) {
+const usePrevious = (src) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -9,30 +9,30 @@ function usePrevious(src) {
   });
 
   return ref.current;
-}
+};
 
-function FadeOutIn({
+const FadeOutIn = ({
   src, time, alt, className, ...props
-}) {
+}) => {
   const [currentSrc, setCurrentSrc] = useState(src);
   const [animation, setAnimation] = useState(false);
   const prevSrc = usePrevious(src);
-  const timer = useRef(null);
+  const timer = useRef(0);
   const target = useRef(null);
 
   useEffect(() => {
     target.current = src;
-    if (prevSrc && !timer.current) {
+    if (prevSrc && timer.current === 0) {
       setAnimation(true);
       timer.current = setTimeout(() => {
         setCurrentSrc(target.current);
         setAnimation(false);
-        timer.current = null;
+        timer.current = 0;
       }, (time * 1000) / 2);
     }
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer.current);
     };
   }, [src, time]);
 
@@ -45,7 +45,7 @@ function FadeOutIn({
       {...props}
     />
   );
-}
+};
 
 FadeOutIn.defaultProps = {
   className: '',
