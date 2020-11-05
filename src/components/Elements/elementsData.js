@@ -16,6 +16,11 @@ import barbara from '../../assets/images/char/barbara.png';
 import diluc from '../../assets/images/char/diluc.png';
 import xiangling from '../../assets/images/char/xiangling.png';
 import chongyun from '../../assets/images/char/chongyun.png';
+import qiqi from '../../assets/images/char/qiqi.png';
+import mona from '../../assets/images/char/mona.png';
+import sucrose from '../../assets/images/char/sucrose.png';
+import fischl from '../../assets/images/char/fischl.png';
+import noelle from '../../assets/images/char/noelle.png';
 
 // eslint-disable-next-line import/prefer-default-export
 export const elements = [
@@ -24,18 +29,21 @@ export const elements = [
     name: 'anemo',
     color: 'var(--anemo-color)',
     char: jean,
+    leftChar: sucrose,
   },
   {
     Component: Geo,
     name: 'geo',
     color: 'var(--geo-color)',
     char: ningguang,
+    leftChar: noelle,
   },
   {
     Component: Electro,
     name: 'electro',
     color: 'var(--electro-color)',
     char: keqing,
+    leftChar: fischl,
   },
   {
     Component: Dendro,
@@ -48,6 +56,7 @@ export const elements = [
     name: 'hydro',
     color: 'var(--hydro-color)',
     char: barbara,
+    leftChar: mona,
   },
   {
     Component: Pyro,
@@ -61,5 +70,6 @@ export const elements = [
     name: 'cryo',
     color: 'var(--cryo-color)',
     char: chongyun,
+    leftChar: qiqi,
   },
 ];
