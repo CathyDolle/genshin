@@ -1,14 +1,17 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // CHAR
-import paimon from "../assets/images/char/paimon.png"
+import paimon from '../assets/images/char/paimon.png';
 
 // TEXT
-import dailies from "../text/dailies"
-const { post1Title, post1Text, post1src, post2Title, post2Text, post2src } = dailies
+import dailies from '../text/dailies';
+
+const {
+  post1Title, post1Text, post1src, post2Title, post2Text, post2src,
+} = dailies;
 
 function Dailies() {
   return (
@@ -32,7 +35,7 @@ function Dailies() {
         />
       </Content>
     </Wrapper>
-  )
+  );
 }
 
-export default Dailies
+export default Dailies;

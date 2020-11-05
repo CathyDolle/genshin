@@ -1,12 +1,12 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // CHAR
-import xiao from "../assets/images/char/xiao.png"
-import chibiMap from "../assets/images/chibi/chibiMap.png"
-import chibiTimer from "../assets/images/chibi/chibiTimer.png"
+import xiao from '../assets/images/char/xiao.png';
+import chibiMap from '../assets/images/chibi/chibiMap.png';
+import chibiTimer from '../assets/images/chibi/chibiTimer.png';
 
 function News() {
   return (
@@ -40,7 +40,7 @@ function News() {
         />
       </Content>
     </Wrapper>
-  )
+  );
 }
 
-export default News
+export default News;

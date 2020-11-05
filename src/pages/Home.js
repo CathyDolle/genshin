@@ -1,19 +1,21 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import { useContext } from 'react';
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // TEXT
-import { homeTitle, homeText, codeTitle, codeText } from "./../text/home.json"
+import {
+  homeTitle, homeText, codeTitle, codeText,
+} from '../text/home.json';
 
 // CONTEXT
-import { useContext } from "react"
-import colorContext from "../contexts/element"
-import { elements } from "./../components/Elements"
+import colorContext from '../contexts/element';
+import { elements } from '../components/Elements';
 
 function Home() {
-  const { current } = useContext(colorContext)
-  const CurrentElement = elements.find(({ name }) => current === name)
+  const { current } = useContext(colorContext);
+  const CurrentElement = elements.find(({ name }) => current === name);
   return (
     <Wrapper>
       <Content>
@@ -29,7 +31,7 @@ function Home() {
       </Content>
       <Visual srcRight={CurrentElement.char} height="100%" />
     </Wrapper>
-  )
+  );
 }
 
-export default Home
+export default Home;

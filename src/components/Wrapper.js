@@ -1,13 +1,12 @@
-import React, { useContext } from "react"
-import Elements from "./Elements"
-import "./Wrapper.scss"
-import Nav from "./Nav"
-import colorContext from "../contexts/element"
-import { elements } from "./Elements"
+import React, { useContext } from 'react';
+import Elements, { elements } from './Elements';
+import './Wrapper.scss';
+import Nav from './Nav';
+import colorContext from '../contexts/element';
 
 function Wrapper(props) {
-  const { current } = useContext(colorContext)
-  const CurrentElement = elements.find(({ name }) => current === name)
+  const { current } = useContext(colorContext);
+  const CurrentElement = elements.find(({ name }) => current === name);
 
   return (
     <section className="wrapper">
@@ -19,12 +18,12 @@ function Wrapper(props) {
       <Nav />
       <div className="container">{props.children}</div>
       <Elements />
-      <div className="shadow"></div>
+      <div className="shadow" />
       <footer>
         <p>copyright machin truc</p>
       </footer>
     </section>
-  )
+  );
 }
 
-export default Wrapper
+export default Wrapper;

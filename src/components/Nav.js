@@ -1,17 +1,17 @@
-import { useContext } from "react"
-import { NavLink, useHistory } from "react-router-dom"
-import "./Nav.scss"
-import colorContext from "../contexts/element"
-import { elements } from "./Elements"
+import { useContext } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
+import './Nav.scss';
+import colorContext from '../contexts/element';
+import { elements } from './Elements';
 
 function Nav() {
-  const { current } = useContext(colorContext)
-  const CurrentElement = elements.find(({ name }) => current === name)
-  const history = useHistory()
+  const { current } = useContext(colorContext);
+  const CurrentElement = elements.find(({ name }) => current === name);
+  const history = useHistory();
 
   const handleClick = () => {
-    history.push("/")
-  }
+    history.push('/');
+  };
 
   return (
     <nav>
@@ -29,7 +29,7 @@ function Nav() {
       <NavLink to="/indispensables">Indispensables</NavLink>
       <NavLink to="/news">News</NavLink>
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

@@ -1,12 +1,12 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "../components/Visual"
-import Content from "../components/Content"
-import TextContent from "../components/TextContent"
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // CHAR
-import sucrose from "../assets/images/char/sucrose.png"
-import amberWow from "../assets/images/chibi/amberWow.png"
-import razorCry from "../assets/images/chibi/razorCry.png"
+import sucrose from '../assets/images/char/sucrose.png';
+import amberWow from '../assets/images/chibi/amberWow.png';
+import razorCry from '../assets/images/chibi/razorCry.png';
 
 function GuideAbyss() {
   return (
@@ -30,7 +30,7 @@ function GuideAbyss() {
         />
       </Content>
     </Wrapper>
-  )
+  );
 }
 
-export default GuideAbyss
+export default GuideAbyss;

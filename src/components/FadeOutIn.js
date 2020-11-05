@@ -1,28 +1,30 @@
-import React, { useEffect, useState, useRef } from "react"
-import PropTypes from "prop-types"
+import React, { useEffect, useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 FadeOutIn.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   time: PropTypes.number.isRequired,
-}
+};
 
 function usePrevious(src) {
-  const ref = useRef()
+  const ref = useRef();
 
   useEffect(() => {
-    ref.current = src
-  })
+    ref.current = src;
+  });
 
-  return ref.current
+  return ref.current;
 }
 
-function FadeOutIn({ src, time, alt, className, ...props }) {
-  const [currentSrc, setCurrentSrc] = useState(src)
+function FadeOutIn({
+  src, time, alt, className, ...props
+}) {
+  const [currentSrc, setCurrentSrc] = useState(src);
   const [animation, setAnimation] = useState(false);
-  const prevSrc = usePrevious(src)
-  const timer = useRef(null)
-  const target = useRef(null)
+  const prevSrc = usePrevious(src);
+  const timer = useRef(null);
+  const target = useRef(null);
 
   useEffect(() => {
     target.current = src;
@@ -37,17 +39,17 @@ function FadeOutIn({ src, time, alt, className, ...props }) {
 
     return () => {
       clearTimeout(timer);
-    }
-  }, [src, time])
+    };
+  }, [src, time]);
 
-  return <img
-            alt={alt}
-            className={`${animation ? 'animationClass ': ''}${className}`}
-            src={currentSrc}
-            {...props}
-          />
+  return (
+    <img
+      alt={alt}
+      className={`${animation ? 'animationClass ' : ''}${className}`}
+      src={currentSrc}
+      {...props}
+    />
+  );
 }
 
-
-
-export default FadeOutIn
+export default FadeOutIn;

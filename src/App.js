@@ -1,17 +1,17 @@
-import "./App.scss"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Home from "./pages/Home"
-import Guides from "./pages/Guides"
-import Dailies from "./pages/Dailies"
-import Indispensables from "./pages/Indispensables"
-import Reactions from "./pages/Indispensables/Reactions"
-import News from "./pages/News"
-import GuideDebutant from "./pages/Debutant"
-import GuideAbyss from "./pages/Abyss"
-import { ElementProvider } from "./contexts/element"
+import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Guides from './pages/Guides';
+import Dailies from './pages/Dailies';
+import Indispensables from './pages/Indispensables';
+import Reactions from './pages/Indispensables/Reactions';
+import News from './pages/News';
+import GuideDebutant from './pages/Debutant';
+import GuideAbyss from './pages/Abyss';
+import { ElementProvider } from './contexts/element';
 
 // responsive
-import "./Responsive.scss"
+import './Responsive.scss';
 
 function App() {
   return (
@@ -47,11 +47,11 @@ function App() {
           <Route path="/news">
             <News />
           </Route>
-          
+
         </Switch>
       </Router>
     </ElementProvider>
-  )
+  );
 }
 
-export default App
+export default App;

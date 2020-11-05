@@ -1,18 +1,19 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "../components/Visual"
-import Content from "../components/Content"
-import TextContent from "../components/TextContent"
+import { useContext } from 'react';
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // CHAR
-import sucrose from "../assets/images/char/sucrose.png"
+import sucrose from '../assets/images/char/sucrose.png';
 
 // CONTEXT
-import { useContext } from "react"
-import colorContext from "../contexts/element"
-import { elements } from "./../components/Elements"
+import colorContext from '../contexts/element';
+import { elements } from '../components/Elements';
 
 // TEXT
-import indispensables from "../text/indispensables"
+import indispensables from '../text/indispensables';
+
 const {
   post1Title,
   post1Text,
@@ -29,12 +30,11 @@ const {
   post3src,
   post3LinkName,
   post3Link,
-} = indispensables
-
+} = indispensables;
 
 function Indispensables() {
-  const { current } = useContext(colorContext)
-  const CurrentElement = elements.find(({ name }) => current === name)
+  const { current } = useContext(colorContext);
+  const CurrentElement = elements.find(({ name }) => current === name);
   return (
     <Wrapper>
       <Visual srcLeft={CurrentElement.leftChar} height="95%" />
@@ -64,7 +64,7 @@ function Indispensables() {
         />
       </Content>
     </Wrapper>
-  )
+  );
 }
 
-export default Indispensables
+export default Indispensables;

@@ -1,13 +1,13 @@
-import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import Wrapper from '../components/Wrapper';
+import Visual from '../components/Visual';
+import Content from '../components/Content';
+import TextContent from '../components/TextContent';
 
 // CHAR
-import abyss from "../assets/images/banner/abyss.png"
-import chibiGuide from "../assets/images/chibi/chibiGuide.png"
-import chibiAbyss from "../assets/images/chibi/chibiAbyss.png"
-import guide from "../assets/images/banner/guide.png"
+import abyss from '../assets/images/banner/abyss.png';
+import chibiGuide from '../assets/images/chibi/chibiGuide.png';
+import chibiAbyss from '../assets/images/chibi/chibiAbyss.png';
+import guide from '../assets/images/banner/guide.png';
 
 function Guides() {
   return (
@@ -34,7 +34,7 @@ function Guides() {
         />
       </Content>
     </Wrapper>
-  )
+  );
 }
 
-export default Guides
+export default Guides;

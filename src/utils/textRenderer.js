@@ -1,11 +1,10 @@
-import { Fragment } from "react"
+import { Fragment } from 'react';
 
-const renderWithNextLine = (text) =>
-  text.split("\n").map((entry) => (
-    <Fragment key={entry}>
-      {entry}
-      <br />
-    </Fragment>
-  ))
+const renderWithNextLine = (text) => text.split('\n').map((entry) => (
+  <Fragment key={entry}>
+    {entry}
+    <br />
+  </Fragment>
+));
 
-export { renderWithNextLine }
+export { renderWithNextLine };
