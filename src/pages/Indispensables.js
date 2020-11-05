@@ -1,25 +1,48 @@
 import Wrapper from "../components/Wrapper"
-import Visual from "./../components/Visual"
-import Content from "./../components/Content"
-import TextContent from "./../components/TextContent"
+import Visual from "../components/Visual"
+import Content from "../components/Content"
+import TextContent from "../components/TextContent"
 
 // CHAR
 import sucrose from "../assets/images/char/sucrose.png"
 
+// CONTEXT
+import { useContext } from "react"
+import colorContext from "../contexts/color"
+import { elements } from "./../components/Elements"
+
 // TEXT
 import indispensables from "../text/indispensables"
-const { post1Title, post1Text, post1src, post2Title, post2Text, post2src } = indispensables
+const {
+  post1Title,
+  post1Text,
+  post1src,
+  post1LinkName,
+  post1Link,
+  post2Title,
+  post2Text,
+  post2src,
+  post2LinkName,
+  post2Link,
+  post3Title,
+  post3Text,
+  post3src,
+  post3LinkName,
+  post3Link,
+} = indispensables
 
 
 function Indispensables() {
+  const { current } = useContext(colorContext)
+  const CurrentElement = elements.find(({ name }) => current === name)
   return (
     <Wrapper>
-      <Visual srcLeft={sucrose} height="95%" />
+      <Visual srcLeft={CurrentElement.leftChar} height="95%" />
       <Content>
         <TextContent
           title={post1Title}
-          hrefName="▶ Voir la map"
-          href="https://www.genshin-impact.fr/map/"
+          hrefName={post1LinkName}
+          href={post1Link}
           src={post1src}
           text={post1Text}
         />
@@ -27,10 +50,17 @@ function Indispensables() {
         <TextContent
           title={post2Title}
           text={post2Text}
-          //   href="https://genshin.mihoyo.com/fr/gift"
-          toName="▶ Voir les timers"
-          to="/"
+          toName={post2LinkName}
+          to={post2Link}
           src={post2src}
+        />
+
+        <TextContent
+          title={post3Title}
+          text={post3Text}
+          toName={post3LinkName}
+          to={post3Link}
+          src={post3src}
         />
       </Content>
     </Wrapper>

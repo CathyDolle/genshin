@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Guides from "./pages/Guides"
 import Dailies from "./pages/Dailies"
 import Indispensables from "./pages/Indispensables"
+import Reactions from "./pages/Indispensables/Reactions"
 import News from "./pages/News"
 import GuideDebutant from "./pages/Debutant"
 import GuideAbyss from "./pages/Abyss"
@@ -17,20 +18,13 @@ function App() {
     <ColorProvider>
       <Router>
         <Switch>
+          {/* home */}
           <Route exact path="/">
             <Home />
           </Route>
+          {/* guides */}
           <Route exact path="/guides">
             <Guides />
-          </Route>
-          <Route path="/dailies">
-            <Dailies />
-          </Route>
-          <Route path="/indispensables">
-            <Indispensables />
-          </Route>
-          <Route path="/news">
-            <News />
           </Route>
           <Route path="/guides/debutant">
             <GuideDebutant />
@@ -38,6 +32,22 @@ function App() {
           <Route path="/guides/abyss">
             <GuideAbyss />
           </Route>
+          {/* dailies */}
+          <Route path="/dailies">
+            <Dailies />
+          </Route>
+          {/* Indispensables */}
+          <Route path="/indispensables">
+            <Indispensables />
+          </Route>
+          <Route path="/reactions">
+            <Reactions />
+          </Route>
+          {/* news */}
+          <Route path="/news">
+            <News />
+          </Route>
+          
         </Switch>
       </Router>
     </ColorProvider>

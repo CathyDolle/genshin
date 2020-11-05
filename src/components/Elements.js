@@ -16,6 +16,7 @@ import ningguang from "./../assets/images/char/ningguang.png"
 import keqing from "./../assets/images/char/keqing.png"
 import barbara from "./../assets/images/char/barbara.png"
 import diluc from "./../assets/images/char/diluc.png"
+import xiangling from "./../assets/images/char/xiangling.png"
 import chongyun from "./../assets/images/char/chongyun.png"
 
 export const elements = [
@@ -53,7 +54,8 @@ export const elements = [
     Component: Pyro,
     name: "pyro",
     color: "var(--pyro-color)",
-    char: diluc
+    char: diluc,
+    leftChar: xiangling
   },
   {
     Component: Cryo,

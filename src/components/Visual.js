@@ -5,7 +5,7 @@ function Visual(props) {
     <section className="visual">
       {props.srcRight && (
         <FadeOutIn
-          time={4}
+          time={1}
           className="right"
           src={props.srcRight}
           alt="visual"
@@ -14,7 +14,7 @@ function Visual(props) {
       )}
       {props.srcLeft && (
         <FadeOutIn
-          time={4}
+          time={1}
           className="left"
           src={props.srcLeft}
           alt="visual"
@@ -23,7 +23,7 @@ function Visual(props) {
       )}
        {props.srcCustom && (
         <FadeOutIn
-          time={4}
+          time={1}
           className="xiao"
           src={props.srcCustom}
           alt="visual"

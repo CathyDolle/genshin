@@ -6,8 +6,7 @@ import TextContent from "./../components/TextContent"
 // TEXT
 import { homeTitle, homeText, codeTitle, codeText } from "./../text/home.json"
 
-// CHAR
-
+// CONTEXT
 import { useContext } from "react"
 import colorContext from "../contexts/color"
 import { elements } from "./../components/Elements"
