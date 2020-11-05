@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import colorContext from "../contexts/color"
+import colorContext from "../contexts/element"
 
 // LOGO TYPES
 import { Anemo } from "genshin-icon"

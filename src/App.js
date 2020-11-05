@@ -8,14 +8,14 @@ import Reactions from "./pages/Indispensables/Reactions"
 import News from "./pages/News"
 import GuideDebutant from "./pages/Debutant"
 import GuideAbyss from "./pages/Abyss"
-import { ColorProvider } from "./contexts/color"
+import { ElementProvider } from "./contexts/element"
 
 // responsive
 import "./Responsive.scss"
 
 function App() {
   return (
-    <ColorProvider>
+    <ElementProvider>
       <Router>
         <Switch>
           {/* home */}
@@ -50,7 +50,7 @@ function App() {
           
         </Switch>
       </Router>
-    </ColorProvider>
+    </ElementProvider>
   )
 }
 

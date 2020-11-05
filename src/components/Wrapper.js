@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Elements from "./Elements"
 import "./Wrapper.scss"
 import Nav from "./Nav"
-import colorContext from "../contexts/color"
+import colorContext from "../contexts/element"
 import { elements } from "./Elements"
 
 function Wrapper(props) {

@@ -2,9 +2,9 @@ import { createContext, useState } from "react"
 import { elements } from "../components/Elements"
 
 // On crée un context React, qu'on va utiliser partout dans l'application
-const colorContext = createContext({ current: null, setColor: null })
+const elementContext = createContext({ current: null, setColor: null })
 
-export const ColorProvider = ({ children }) => {
+export const ElementProvider = ({ children }) => {
   const [color, setStateColor] = useState("anemo")
 
   const setColor = (color) => {
@@ -14,10 +14,10 @@ export const ColorProvider = ({ children }) => {
   }
 
   return (
-    <colorContext.Provider value={{ current: color, setColor: setColor }}>
+    <elementContext.Provider value={{ current: color, setColor: setColor }}>
       {children}
-    </colorContext.Provider>
+    </elementContext.Provider>
   )
 }
 
-export default colorContext
+export default elementContext

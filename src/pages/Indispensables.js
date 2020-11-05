@@ -8,7 +8,7 @@ import sucrose from "../assets/images/char/sucrose.png"
 
 // CONTEXT
 import { useContext } from "react"
-import colorContext from "../contexts/color"
+import colorContext from "../contexts/element"
 import { elements } from "./../components/Elements"
 
 // TEXT

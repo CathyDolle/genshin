@@ -8,7 +8,7 @@ import { homeTitle, homeText, codeTitle, codeText } from "./../text/home.json"
 
 // CONTEXT
 import { useContext } from "react"
-import colorContext from "../contexts/color"
+import colorContext from "../contexts/element"
 import { elements } from "./../components/Elements"
 
 function Home() {

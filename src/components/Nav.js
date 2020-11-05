@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { NavLink, useHistory } from "react-router-dom"
 import "./Nav.scss"
-import colorContext from "../contexts/color"
+import colorContext from "../contexts/element"
 import { elements } from "./Elements"
 
 function Nav() {
