@@ -15,7 +15,8 @@ import jean from "./../assets/images/char/jean.png"
 import ningguang from "./../assets/images/char/ningguang.png"
 import keqing from "./../assets/images/char/keqing.png"
 import barbara from "./../assets/images/char/barbara.png"
-import klee from "./../assets/images/char/klee.png"
+import diluc from "./../assets/images/char/diluc.png"
+import chongyun from "./../assets/images/char/chongyun.png"
 
 export const elements = [
   {
@@ -52,13 +53,13 @@ export const elements = [
     Component: Pyro,
     name: "pyro",
     color: "var(--pyro-color)",
-    char: klee
+    char: diluc
   },
   {
     Component: Cryo,
     name: "cryo",
     color: "var(--cryo-color)",
-    char: keqing
+    char: chongyun
   },
 ]
 

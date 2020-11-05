@@ -13,7 +13,7 @@ function Wrapper(props) {
     <section className="wrapper">
       <CurrentElement.Component
         className="watermark"
-        size="35%"
+        size="45%"
         color={CurrentElement.color}
       />
       <Nav />

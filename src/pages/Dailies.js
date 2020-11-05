@@ -5,8 +5,10 @@ import TextContent from "./../components/TextContent"
 
 // CHAR
 import paimon from "../assets/images/char/paimon.png"
-import chibiWow from "../assets/images/chibi/chibiWow.png"
-import razorCry from "../assets/images/chibi/razorCry.png"
+
+// TEXT
+import dailies from "../text/dailies"
+const { post1Title, post1Text, post1src, post2Title, post2Text, post2src } = dailies
 
 function Dailies() {
   return (
@@ -15,18 +17,18 @@ function Dailies() {
       <Content>
         {/* LEVELING */}
         <TextContent
-          title="Les voeux"
-          src={chibiWow}
-          text="Soyez curieux blabla ouvrez les coffres"
+          title={post1Title}
+          src={post1src}
+          text={post1Text}
         />
         <TextContent
-          title="Coupons"
-          text="Pas de code cette semaine :("
+          title={post2Title}
+          text={post2Text}
           //   href="https://genshin.mihoyo.com/fr/gift"
           linkName="ici"
           target="_blank"
           //   src={jeanHeart}
-          src={razorCry}
+          src={post2src}
         />
       </Content>
     </Wrapper>

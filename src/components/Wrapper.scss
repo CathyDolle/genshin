@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     .elements {
-      z-index:100;
+      z-index: 100;
       margin: 1rem 0;
       cursor: pointer;
       transition: filter 0.8s;
@@ -71,7 +71,12 @@
         animation-fill-mode: forwards;
       }
       img.xiao {
-        left: -5rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        animation-name: charAnimationXiao;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
       }
     }
     .content {
@@ -131,11 +136,22 @@
 
 @keyframes charAnimationLeft {
   0% {
-    left: 0%;
+    left: -20%;
     opacity: 0;
   }
   100% {
     left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes charAnimationXiao {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  100% {
+    left: -40%;
     opacity: 1;
   }
 }

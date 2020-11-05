@@ -4,30 +4,33 @@ import Content from "./../components/Content"
 import TextContent from "./../components/TextContent"
 
 // CHAR
-import lisa from "../assets/images/char/lisa.png"
-import chibiMap from "../assets/images/chibi/chibiMap.png"
-import chibiTimer from "../assets/images/chibi/chibiTimer.png"
+import sucrose from "../assets/images/char/sucrose.png"
+
+// TEXT
+import indispensables from "../text/indispensables"
+const { post1Title, post1Text, post1src, post2Title, post2Text, post2src } = indispensables
+
 
 function Indispensables() {
   return (
     <Wrapper>
-      <Visual srcLeft={lisa} height="95%" />
+      <Visual srcLeft={sucrose} height="95%" />
       <Content>
         <TextContent
-          title="Map interactive"
+          title={post1Title}
           hrefName="▶ Voir la map"
           href="https://www.genshin-impact.fr/map/"
-          src={chibiMap}
-          text="Une map interactive pour voir le spot de chaque ressource"
+          src={post1src}
+          text={post1Text}
         />
 
         <TextContent
-          title="Timer"
-          text="Pour voir le temps de respawn des ressources"
+          title={post2Title}
+          text={post2Text}
           //   href="https://genshin.mihoyo.com/fr/gift"
           toName="▶ Voir les timers"
           to="/"
-          src={chibiTimer}
+          src={post2src}
         />
       </Content>
     </Wrapper>

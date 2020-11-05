@@ -17,6 +17,14 @@ function Visual(props) {
           height={props.height}
         />
       )}
+       {props.srcCustom && (
+        <img
+          className="xiao"
+          src={props.srcCustom}
+          alt="visual"
+          height={props.height}
+        />
+      )}
     </section>
   )
 }

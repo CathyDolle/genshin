@@ -11,7 +11,7 @@ import chibiTimer from "../assets/images/chibi/chibiTimer.png"
 function News() {
   return (
     <Wrapper>
-      <Visual srcLeft={xiao} height="95%" />
+      <Visual srcCustom={xiao} height="95%" />
       <Content>
         <TextContent
           title="Nouveauté de la 1.1"

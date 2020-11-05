@@ -12,10 +12,6 @@ import { useContext } from "react"
 import colorContext from "../contexts/color"
 import { elements } from "./../components/Elements"
 
-// import jean from "../assets/images/char/jean.png"
-// import jeanHeart from "../assets/images/chibi/jeanHeart.png"
-// import razorCry from "../assets/images/chibi/razorCry.png"
-
 function Home() {
   const { current } = useContext(colorContext)
   const CurrentElement = elements.find(({ name }) => current === name)
