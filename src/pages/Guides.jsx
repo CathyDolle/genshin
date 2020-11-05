@@ -1,5 +1,5 @@
+import React from 'react';
 import Wrapper from '../components/Wrapper';
-import Visual from '../components/Visual';
 import Content from '../components/Content';
 import TextContent from '../components/TextContent';
 

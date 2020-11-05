@@ -1,15 +1,12 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
 import TextContent from '../components/TextContent';
 
-// CHAR
-import sucrose from '../assets/images/char/sucrose.png';
-
 // CONTEXT
 import colorContext from '../contexts/element';
-import { elements } from '../components/Elements';
+import { elements } from '../components/Elements/elementsData';
 
 // TEXT
 import indispensables from '../text/indispensables';

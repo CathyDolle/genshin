@@ -1,3 +1,4 @@
+import React from 'react';
 import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
@@ -20,7 +21,6 @@ function News() {
           src={chibiMap}
           text="La maj est prévue pour le 11 novembre, aucune région n'a été annoncée. Pour plus d'infos :"
         />
-
         <TextContent
           title="Timer"
           text="Pour voir le temps de respawn des ressources"

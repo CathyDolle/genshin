@@ -1,12 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-FadeOutIn.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  time: PropTypes.number.isRequired,
-};
-
 function usePrevious(src) {
   const ref = useRef();
 
@@ -47,9 +41,21 @@ function FadeOutIn({
       alt={alt}
       className={`${animation ? 'animationClass ' : ''}${className}`}
       src={currentSrc}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     />
   );
 }
+
+FadeOutIn.defaultProps = {
+  className: '',
+};
+
+FadeOutIn.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  time: PropTypes.number.isRequired,
+  className: PropTypes.string,
+};
 
 export default FadeOutIn;

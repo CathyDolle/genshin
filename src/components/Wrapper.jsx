@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import Elements, { elements } from './Elements';
+import PropTypes from 'prop-types';
+import Elements from './Elements/Elements';
+import { elements } from './Elements/elementsData';
 import './Wrapper.scss';
 import Nav from './Nav';
 import colorContext from '../contexts/element';
 
-function Wrapper(props) {
+const Wrapper = ({ children }) => {
   const { current } = useContext(colorContext);
   const CurrentElement = elements.find(({ name }) => current === name);
 
@@ -16,7 +18,7 @@ function Wrapper(props) {
         color={CurrentElement.color}
       />
       <Nav />
-      <div className="container">{props.children}</div>
+      <div className="container">{children}</div>
       <Elements />
       <div className="shadow" />
       <footer>
@@ -24,6 +26,14 @@ function Wrapper(props) {
       </footer>
     </section>
   );
-}
+};
+
+Wrapper.defaultProps = {
+  children: null,
+};
+
+Wrapper.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Wrapper;

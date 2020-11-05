@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 const renderWithNextLine = (text) => text.split('\n').map((entry) => (
   <Fragment key={entry}>
@@ -7,4 +7,4 @@ const renderWithNextLine = (text) => text.split('\n').map((entry) => (
   </Fragment>
 ));
 
-export { renderWithNextLine };
+export default renderWithNextLine;

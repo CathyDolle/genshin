@@ -1,10 +1,10 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Nav.scss';
 import colorContext from '../contexts/element';
-import { elements } from './Elements';
+import { elements } from './Elements/elementsData';
 
-function Nav() {
+const Nav = () => {
   const { current } = useContext(colorContext);
   const CurrentElement = elements.find(({ name }) => current === name);
   const history = useHistory();
@@ -30,6 +30,6 @@ function Nav() {
       <NavLink to="/news">News</NavLink>
     </nav>
   );
-}
+};
 
 export default Nav;
