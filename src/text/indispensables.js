@@ -22,7 +22,7 @@ const indispensable = {
       text: 'Toutes les réactions élémentaires possibles avec vos éléments.',
       src: chibiTimer,
       linkName: '▶ Voir les réactions',
-      link: '/reactions',
+      link: '/indispensables/reactions',
     },
   ],
 };

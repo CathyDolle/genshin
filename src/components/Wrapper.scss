@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     .elements {
-      z-index: 100;
+      z-index: 2;
       margin: 1rem 0;
       cursor: pointer;
       transition: filter 0.8s;
@@ -166,3 +166,4 @@
     opacity: 1;
   }
 }
+
