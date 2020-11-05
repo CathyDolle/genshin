@@ -13,26 +13,6 @@ const Visual = ({
       alt="visual"
       height={height}
     />
-    {/*
-    srcLeft && (
-      <FadeOutIn
-        time={1}
-        className="left"
-        src={srcLeft}
-        alt="visual"
-        height={height}
-      />
-    )}
-    {srcCustom && (
-    <FadeOutIn
-      time={1}
-      className="xiao"
-      src={srcCustom}
-      alt="visual"
-      height={height}
-    />
-    )
-    */}
   </section>
 );
 
