@@ -17,7 +17,7 @@ const {
 function Dailies() {
   return (
     <Wrapper>
-      <Visual srcLeft={paimon} height="95%" />
+      <Visual src={paimon} position="left" height="95%" />
       <Content>
         {/* LEVELING */}
         <TextContent

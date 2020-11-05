@@ -11,7 +11,7 @@ import razorCry from '../assets/images/chibi/razorCry.png';
 
 const GuideAbyss = () => (
   <Wrapper>
-    <Visual srcLeft={sucrose} height="90%" />
+    <Visual src={sucrose} position="left" height="90%" />
     <Content>
       {/* LEVELING */}
       <TextContent
