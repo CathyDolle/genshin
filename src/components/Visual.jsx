@@ -12,9 +12,9 @@ const Visual = ({
       className={position}
       // TODO: Refactor this ternary condition. This should not exist.
       enterAnimationName={position === 'left' || position === 'xiao' ? 'charAnimationLeft' : 'charAnimationRight'}
-      enterAnimationDuration={500}
+      enterAnimationDuration={2000}
       leaveAnimationName="fadeCharAnimation"
-      leaveAnimationDuration={1000}
+      leaveAnimationDuration={500}
       height={height}
     />
   </section>
