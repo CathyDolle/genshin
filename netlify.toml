@@ -1,0 +1,35 @@
+
+[[redirects]]
+  from = "/guides"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/guides/debutant"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/guides/abyss"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/dailies"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/indispensables"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/reactions"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/news"
+  to = "/"
+  status = 200
