@@ -24,7 +24,6 @@ const GuideAbyss = () => (
         text="Pas de code cette semaine :("
         //   href="https://genshin.mihoyo.com/fr/gift"
         linkText="ici"
-        external
         //   src={jeanHeart}
         src={razorCry}
       />

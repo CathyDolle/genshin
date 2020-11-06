@@ -25,7 +25,7 @@ const VisualAndPostsTemplate = ({ visual, posts, visualPosition }) => {
       <Visual src={visual || CurrentElement.leftChar} position={visualPosition} height="95%" />
       <Content>
         {posts.map(({
-          title, text, src, to, linkText, external,
+          title, text, src, to, linkText,
         }) => (
           <TextContent
             title={title}
@@ -33,7 +33,6 @@ const VisualAndPostsTemplate = ({ visual, posts, visualPosition }) => {
             src={src}
             text={text}
             to={to}
-            external={external}
           />
         ))}
       </Content>
@@ -55,7 +54,6 @@ VisualAndPostsTemplate.propTypes = {
     text: PropTypes.string,
     linkText: PropTypes.string,
     to: PropTypes.string,
-    external: PropTypes.bool,
     src: PropTypes.string,
   })),
 };
