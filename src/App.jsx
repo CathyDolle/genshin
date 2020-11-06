@@ -43,7 +43,7 @@ function App() {
             <Reactions />
           </Route>
           <Route path="/news">
-            <VisualAndPostsTemplate visual={tartaglia} visualPosition="left" posts={newsData.posts} />
+            <VisualAndPostsTemplate visual={tartaglia} posts={newsData.posts} />
           </Route>
         </Switch>
       </Router>
