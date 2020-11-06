@@ -58,20 +58,11 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        animation-name: charAnimationRight;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
       }
       img.left {
         position: absolute;
         left: 0;
         bottom: 0;
-        animation-name: charAnimationLeft;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-      }
-      img.animationClass {
-        animation: fadeCharAnimation 0.5s;
       }
       img.xiao {
         position: absolute;
@@ -147,11 +138,10 @@
 
 @keyframes charAnimationLeft {
   0% {
-    left: -20%;
+    transform: translateX(-20%);
     opacity: 0;
   }
   100% {
-    left: 0%;
     opacity: 1;
   }
 }
