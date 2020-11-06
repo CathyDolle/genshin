@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const isInternal = (link) => (link.startsWith('/'));
+const isExternal = (link) => (/(http(s?)):\/\//i.test(link));
 
-const LinkOrExternal = ({ to, children }) => (!(isInternal(to))
+const LinkOrExternal = ({ to, children }) => (isExternal(to)
   ? <a href={to} target="_blank" rel="noreferrer">{children}</a>
   : <Link to={to}>{children}</Link>);
 
