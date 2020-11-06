@@ -38,10 +38,10 @@ function App() {
             <Dailies />
           </Route>
           {/* Indispensables */}
-          <Route path="/indispensables">
+          <Route exact path="/indispensables">
             <Indispensables />
           </Route>
-          <Route path="/reactions">
+          <Route path="/indispensables/reactions">
             <Reactions />
           </Route>
           {/* news */}
