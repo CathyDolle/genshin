@@ -1,0 +1,23 @@
+.visual {
+  position: relative;
+  pointer-events: none;
+  width: 50%;
+  height: 100%;
+  img.right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  img.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  img.xiao {
+    position: absolute;
+    left: -40%;
+    bottom: 0;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+}

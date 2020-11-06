@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FadeOutIn from '../utils/FadeOutIn';
+import './Visual.scss';
 
 const Visual = ({
   src, position, height,

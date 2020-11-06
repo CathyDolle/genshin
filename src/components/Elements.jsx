@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import colorContext from '../contexts/element';
 import { elements } from '../data/elementsData';
+import './Elements.scss';
 
 const Elements = () => {
   const { current, setColor } = useContext(colorContext);
