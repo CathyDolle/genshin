@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Wrapper from '../../components/Wrapper';
 import './Reactions.scss';
 import colorContext from '../../contexts/element';
+import ReactionSection from '../../components/ReactionSection';
 import { elements } from '../../components/Elements/elementsData';
 
 const Reactions = () => {
@@ -23,7 +24,9 @@ const Reactions = () => {
           ))}
         </div>
         <div className="reactions_section">
-          <h1>test</h1>
+          <ReactionSection />
+          <ReactionSection />
+          <ReactionSection />
         </div>
       </section>
     </Wrapper>

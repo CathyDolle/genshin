@@ -1,0 +1,32 @@
+.reaction_container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 4% 0 4%;
+  .border {
+    width: 30%;
+    height: 4rem;
+    border-top: solid 0.1rem var(--h1-color);
+    &_left {
+      border-left: solid 0.1rem var(--h1-color);
+    }
+    &_right {
+      border-right: solid 0.1rem var(--h1-color);
+    }
+  }
+  .reaction {
+    height: 4rem;
+    margin-top: -2rem;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

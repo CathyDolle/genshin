@@ -16,7 +16,7 @@ function Indispensables() {
   const CurrentElement = elements.find(({ name }) => current === name);
   return (
     <Wrapper>
-      <Visual src={CurrentElement.char} position="left" height="95%" />
+      <Visual src={CurrentElement.leftChar} position="left" height="95%" />
       <Content>
         {article.map(({
           title, text, src, linkName, link,
