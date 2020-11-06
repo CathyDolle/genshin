@@ -7,7 +7,7 @@ const AnimatedImg = (props) => {
   } = props;
 
   useEffect(() => {
-    const timeoutId = setTimeout(onAnimationEnd, props.animationDuration);
+    const timeoutId = setTimeout(onAnimationEnd, animationDuration);
     return () => {
       clearTimeout(timeoutId);
     };
