@@ -46,6 +46,7 @@ const FadeOutIn = (props) => {
           animationName={enterAnimationName}
           animationDuration={enterAnimationDuration}
           className={className}
+          height={height}
         />
       )}
     </>

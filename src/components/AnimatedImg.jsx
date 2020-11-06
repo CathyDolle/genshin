@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const AnimatedImg = (props) => {
   const {
-    animationName, style, animationDuration, alt, src, className, onAnimationEnd,
+    animationName, style, animationDuration, alt, src, className, onAnimationEnd, height,
   } = props;
 
   useEffect(() => {
@@ -19,12 +19,14 @@ const AnimatedImg = (props) => {
       src={src}
       className={className}
       style={{ ...style, animationName, animationDuration: `${animationDuration}ms` }}
+      height={height}
     />
   );
 };
 
 AnimatedImg.defaultProps = {
   className: '',
+  height: '',
   style: {},
   onAnimationEnd: () => {},
 };
@@ -32,6 +34,7 @@ AnimatedImg.defaultProps = {
 AnimatedImg.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  height: PropTypes.string,
   animationName: PropTypes.string.isRequired,
   animationDuration: PropTypes.number.isRequired,
   onAnimationEnd: PropTypes.func,

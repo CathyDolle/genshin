@@ -9,6 +9,7 @@ const Visual = ({
     <FadeOutIn
       src={src}
       alt="visual"
+      className={position}
       enterAnimationName={position === 'left' ? 'charAnimationLeft' : 'charAnimationRight'}
       enterAnimationDuration={500}
       leaveAnimationName="fadeCharAnimation"
