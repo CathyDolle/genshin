@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/news"
+  to = "/"
+  status = 200
