@@ -161,7 +161,7 @@ p {
 
 @keyframes charAnimationRight {
   0% {
-    transform: translateX(30%);
+    transform: translate3d(100%, 0, 0);
     opacity: 0;
   }
   100% {
@@ -171,7 +171,7 @@ p {
 
 @keyframes charAnimationLeft {
   0% {
-    transform: translateX(-20%);
+    transform: translate3d(-100%, 0, 0);
     opacity: 0;
   }
   100% {
