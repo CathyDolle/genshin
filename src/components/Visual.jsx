@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FadeOutIn from '../utils/FadeOutIn';
+import './Visual.scss';
 
 const Visual = ({
   src, position, height,
@@ -10,8 +11,7 @@ const Visual = ({
       src={src}
       alt="visual"
       className={position}
-      // TODO: Refactor this ternary condition. This should not exist.
-      enterAnimationName={position === 'left' || position === 'xiao' ? 'charAnimationLeft' : 'charAnimationRight'}
+      enterAnimationName={position === 'left' ? 'charAnimationLeft' : 'charAnimationRight'}
       enterAnimationDuration={2000}
       leaveAnimationName="fadeCharAnimation"
       leaveAnimationDuration={500}

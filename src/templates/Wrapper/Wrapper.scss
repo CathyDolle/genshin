@@ -17,73 +17,12 @@
     position: absolute;
     z-index: -2;
   }
-  .elements_container {
-    position: absolute;
-    top: 0;
-    right: 0rem;
-    height: 100%;
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .elements {
-      z-index: 2;
-      margin: 1rem 0;
-      cursor: pointer;
-      transition: filter 0.8s;
-      opacity: 1;
-    }
-    .elements_inactive {
-      filter: contrast(0);
-      opacity: 0.4;
-      &:hover {
-        filter: none;
-        opacity: 1;
-      }
-    }
-  }
   .container {
     display: flex;
     align-items: center;
     width: 100%;
     height: calc(100% - 5rem);
     // background-color: blue;
-    .visual {
-      position: relative;
-      pointer-events: none;
-      width: 50%;
-      height: 100%;
-      img.right {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-      img.left {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-      }
-      img.xiao {
-        position: absolute;
-        left: -40%;
-        bottom: 0;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-      }
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: 50%;
-      height: 55%;
-      //   padding-bottom: 10rem;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
   }
   footer {
     bottom: 3rem;
@@ -99,48 +38,8 @@
     width: 100vw;
     height: 30%;
     pointer-events: none;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background: var(--shadow);
   }
 }
 
-@keyframes fadeElementAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
 
-@keyframes fadeCharAnimation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes charAnimationRight {
-  0% {
-    transform: translateX(30%);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes charAnimationLeft {
-  0% {
-    transform: translateX(-20%);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

@@ -1,0 +1,26 @@
+.elements_container {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  height: 100%;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .elements {
+    z-index: 2;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: filter 0.8s;
+    opacity: 1;
+  }
+  .elements_inactive {
+    filter: contrast(0);
+    opacity: 0.4;
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+}
