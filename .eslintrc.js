@@ -20,5 +20,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "linebreak-style": [2, "windows"]
     }
 };
