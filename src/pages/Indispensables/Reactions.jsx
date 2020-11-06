@@ -14,7 +14,7 @@ const Reactions = () => {
     const allElementsSelected = currentFocusElement.map((ele) => ele.name);
 
     return allElementsSelected.length > 0 ? reactions
-      .filter((reaction) => allElementsSelected.every((ele) => reaction.types.includes(ele))) : [];
+      .filter((reaction) => allElementsSelected.every((ele) => reaction.search.includes(ele))) : [];
   }, [currentFocusElement]);
 
   const handleClick = (element) => {
