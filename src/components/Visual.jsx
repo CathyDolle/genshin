@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import FadeOutIn from './FadeOutIn';
 
 const Visual = ({
-  src, position, height,
+  src, position,
 }) => (
   <section className="visual">
     <FadeOutIn
-      time={1}
-      className={position}
       src={src}
       alt="visual"
-      height={height}
+      enterAnimationName={position === 'left' ? 'charAnimationLeft' : 'charAnimationRight'}
+      enterAnimationDuration={500}
+      leaveAnimationName="fadeCharAnimation"
+      leaveAnimationDuration={1000}
     />
   </section>
 );
@@ -19,7 +20,6 @@ const Visual = ({
 Visual.propTypes = {
   src: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
 };
 
 export default Visual;

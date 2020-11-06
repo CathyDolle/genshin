@@ -1,49 +1,52 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import AnimatedImg from './AnimatedImg';
 
-const usePrevious = (src) => {
-  const ref = useRef();
-
-  useEffect(() => {
-    ref.current = src;
-  });
-
-  return ref.current;
-};
-
-const FadeOutIn = ({
-  src, time, alt, className, ...props
-}) => {
+const FadeOutIn = (props) => {
+  const {
+    src,
+    alt,
+    className,
+    enterAnimationName,
+    enterAnimationDuration,
+    leaveAnimationName,
+    leaveAnimationDuration,
+  } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
-  const [animation, setAnimation] = useState(false);
-  const prevSrc = usePrevious(src);
-  const timer = useRef(0);
-  const target = useRef(null);
+  const [previousSrc, setPreviousSrc] = useState(null);
 
   useEffect(() => {
-    target.current = src;
-    if (prevSrc && timer.current === 0) {
-      setAnimation(true);
-      timer.current = setTimeout(() => {
-        setCurrentSrc(target.current);
-        setAnimation(false);
-        timer.current = 0;
-      }, (time * 1000) / 2);
+    if (currentSrc !== src) {
+      setPreviousSrc(currentSrc);
+      setCurrentSrc(src);
     }
-
-    return () => {
-      clearTimeout(timer.current);
-    };
-  }, [src, time]);
+  }, [src]);
 
   return (
-    <img
-      alt={alt}
-      className={`${animation ? 'animationClass ' : ''}${className}`}
-      src={currentSrc}
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...props}
-    />
+    <>
+      {previousSrc && (
+        <AnimatedImg
+          className={className}
+          style={{ opacity: 0 }}
+          key={`leaving_${previousSrc}`}
+          alt={alt}
+          src={previousSrc}
+          animationName={leaveAnimationName}
+          animationDuration={leaveAnimationDuration}
+          onAnimationEnd={() => setPreviousSrc(null)}
+        />
+      )}
+      {!previousSrc && (
+        <AnimatedImg
+          key={`entering_${currentSrc}`}
+          alt={alt}
+          src={currentSrc}
+          animationName={enterAnimationName}
+          animationDuration={enterAnimationDuration}
+          className={className}
+        />
+      )}
+    </>
   );
 };
 
@@ -54,7 +57,10 @@ FadeOutIn.defaultProps = {
 FadeOutIn.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  time: PropTypes.number.isRequired,
+  enterAnimationName: PropTypes.string.isRequired,
+  enterAnimationDuration: PropTypes.number.isRequired,
+  leaveAnimationName: PropTypes.string.isRequired,
+  leaveAnimationDuration: PropTypes.number.isRequired,
   className: PropTypes.string,
 };
 
