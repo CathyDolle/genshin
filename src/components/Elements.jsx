@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import colorContext from '../../contexts/element';
-import { elements } from './elementsData';
+import colorContext from '../contexts/element';
+import { elements } from '../data/elementsData';
 
-function Elements() {
+const Elements = () => {
   const { current, setColor } = useContext(colorContext);
 
   return (
@@ -18,6 +18,6 @@ function Elements() {
       ))}
     </div>
   );
-}
+};
 
 export default Elements;
