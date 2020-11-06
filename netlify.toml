@@ -25,7 +25,7 @@
   status = 200
 
 [[redirects]]
-  from = "/reactions"
+  from = "/indispensables/reactions"
   to = "/"
   status = 200
 
