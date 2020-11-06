@@ -21,6 +21,7 @@ import mona from '../assets/images/char/mona.png';
 import sucrose from '../assets/images/char/sucrose.png';
 import fischl from '../assets/images/char/fischl.png';
 import noelle from '../assets/images/char/noelle.png';
+import dendro from '../assets/images/char/dendro.png';
 
 // eslint-disable-next-line import/prefer-default-export
 export const elements = [
