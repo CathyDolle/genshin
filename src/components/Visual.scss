@@ -6,15 +6,12 @@
 
   img.right {
     position: absolute;
-    right: 50%;
+    right: 0;
     bottom: 0;
-    transform: translate3d(50%, 0, 0);
   }
   img.left {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate3d(-50%, 0, 0);
-    animation-fill-mode: forwards;
   }
 }
