@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Nav.scss';
-import colorContext from '../contexts/element';
-import { elements } from './Elements/elementsData';
+import colorContext from '../../contexts/element';
+import { elements } from '../../data/elementsData';
 
 const Nav = () => {
   const { current } = useContext(colorContext);

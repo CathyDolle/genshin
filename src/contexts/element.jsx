@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import { elements } from '../components/Elements/elementsData';
+import { elements } from '../data/elementsData';
 
 // On crée un context React, qu'on va utiliser partout dans l'application
 const elementContext = createContext({ current: null, setColor: null });
