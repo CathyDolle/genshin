@@ -49,7 +49,7 @@ export const elements = [
     Component: Dendro,
     name: 'dendro',
     color: 'var(--dendro-color)',
-    char: keqing,
+    char: dendro,
   },
   {
     Component: Hydro,
