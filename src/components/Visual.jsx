@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FadeOutIn from '../utils/FadeOutIn';
 
 const Visual = ({
-  src, position,
+  src, position, height,
 }) => (
   <section className="visual">
     <FadeOutIn
@@ -13,13 +13,19 @@ const Visual = ({
       enterAnimationDuration={500}
       leaveAnimationName="fadeCharAnimation"
       leaveAnimationDuration={1000}
+      height={height}
     />
   </section>
 );
 
+Visual.defaultProps = {
+  height: null,
+};
+
 Visual.propTypes = {
   src: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
+  height: PropTypes.string,
 };
 
 export default Visual;

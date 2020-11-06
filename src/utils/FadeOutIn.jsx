@@ -11,6 +11,7 @@ const FadeOutIn = (props) => {
     enterAnimationDuration,
     leaveAnimationName,
     leaveAnimationDuration,
+    height,
   } = props;
   const [currentSrc, setCurrentSrc] = useState(src);
   const [previousSrc, setPreviousSrc] = useState(null);
@@ -34,6 +35,7 @@ const FadeOutIn = (props) => {
           animationName={leaveAnimationName}
           animationDuration={leaveAnimationDuration}
           onAnimationEnd={() => setPreviousSrc(null)}
+          height={height}
         />
       )}
       {!previousSrc && (
@@ -52,6 +54,7 @@ const FadeOutIn = (props) => {
 
 FadeOutIn.defaultProps = {
   className: '',
+  height: null,
 };
 
 FadeOutIn.propTypes = {
@@ -62,6 +65,7 @@ FadeOutIn.propTypes = {
   leaveAnimationName: PropTypes.string.isRequired,
   leaveAnimationDuration: PropTypes.number.isRequired,
   className: PropTypes.string,
+  height: PropTypes.string,
 };
 
 export default FadeOutIn;
