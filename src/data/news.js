@@ -7,7 +7,6 @@ const newsData = {
       title: 'Nouveauté de la 1.1',
       linkText: '▶ Regarder le trailer',
       to: 'https://twitter.com/Genshin_7/status/1322148834001129473',
-      external: true,
       src: chibiMap,
       text: 'La maj est prévue pour le 11 novembre, aucune région n\'a été annoncée. Pour plus d\'infos :',
     },

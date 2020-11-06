@@ -6,7 +6,7 @@ import renderWithNextLine from '../../utils/textRenderer';
 import LinkOrExternal from '../../utils/LinkOrExternal';
 
 const TextContent = ({
-  title, src, text, to, linkText, external, banner,
+  title, src, text, to, linkText, banner,
 }) => (
   <section className="text_container">
     <h1>{renderWithNextLine(title)}</h1>
@@ -14,7 +14,7 @@ const TextContent = ({
       {src && <img src={src} alt="chibi" />}
       <p>
         {renderWithNextLine(text)}
-        {to && <LinkOrExternal to={to} external={external}>{linkText}</LinkOrExternal>}
+        {to && <LinkOrExternal to={to}>{linkText}</LinkOrExternal>}
       </p>
     </div>
     {banner && (
@@ -29,7 +29,6 @@ TextContent.defaultProps = {
   to: '',
   linkText: '',
   text: '',
-  external: false,
   banner: '',
 };
 
@@ -39,7 +38,6 @@ TextContent.propTypes = {
   to: PropTypes.string,
   linkText: PropTypes.string,
   text: PropTypes.string,
-  external: PropTypes.bool,
   banner: PropTypes.string,
 };
 
