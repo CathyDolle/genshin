@@ -66,9 +66,8 @@
       }
       img.xiao {
         position: absolute;
-        left: 0;
+        left: -40%;
         bottom: 0;
-        animation-name: charAnimationXiao;
         animation-duration: 1.5s;
         animation-fill-mode: forwards;
       }
@@ -145,15 +144,3 @@
     opacity: 1;
   }
 }
-
-@keyframes charAnimationXiao {
-  0% {
-    left: -60%;
-    opacity: 0;
-  }
-  100% {
-    left: -40%;
-    opacity: 1;
-  }
-}
-
