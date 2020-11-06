@@ -1,11 +1,13 @@
-import React, { useMemo, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import './Reactions.scss';
-import Reaction from '../../modules/Reaction/Reaction';
 import { elements } from '../../data/elementsData';
 import reactions from '../../data/reactionsData';
+import colorContext from '../../contexts/element';
 import Wrapper from '../../templates/Wrapper/Wrapper';
+import Reaction from '../../modules/Reaction/Reaction';
 
 const Reactions = () => {
+  const { setColor } = useContext(colorContext);
   const [currentFocusElement, setCurrentFocusElement] = useState([]);
 
   const availableReactions = useMemo(() => {
@@ -16,11 +18,8 @@ const Reactions = () => {
   }, [currentFocusElement]);
 
   const handleClick = (element) => {
-    if (currentFocusElement.some((ele) => ele.name === element.name)) {
-      setCurrentFocusElement([...currentFocusElement.filter((ele) => ele.name !== element.name)]);
-    } else {
-      setCurrentFocusElement([...currentFocusElement, element]);
-    }
+    setColor(element.name);
+    setCurrentFocusElement([element]);
   };
 
   return (
@@ -44,6 +43,8 @@ const Reactions = () => {
               key={element.name}
               name={element.name}
               description={element.description}
+              primaryComponent={currentFocusElement[0]}
+              types={element.types}
             />
           ))}
         </div>
