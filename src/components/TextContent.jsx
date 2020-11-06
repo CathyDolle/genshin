@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './TextContent.scss';
 import renderWithNextLine from '../utils/textRenderer';
+import LinkOrExternal from '../utils/LinkOrExternal';
 
 const TextContent = ({
-  title, src, text, to, toName, href, hrefName, banner,
+  title, src, text, to, linkText, external, banner,
 }) => (
   <section className="text_container">
     <h1>{renderWithNextLine(title)}</h1>
@@ -13,12 +14,7 @@ const TextContent = ({
       {src && <img src={src} alt="chibi" />}
       <p>
         {renderWithNextLine(text)}
-        {to && <Link to={to}>{toName}</Link>}
-        {href && (
-          <a href={href} target="_blank" rel="noreferrer">
-            {hrefName}
-          </a>
-        )}
+        {to && <LinkOrExternal to={to} external={external}>{linkText}</LinkOrExternal>}
       </p>
     </div>
     {banner && (
@@ -31,10 +27,9 @@ TextContent.defaultProps = {
   title: '',
   src: '',
   to: '',
-  toName: '',
+  linkText: '',
   text: '',
-  href: '',
-  hrefName: '',
+  external: false,
   banner: '',
 };
 
@@ -42,10 +37,9 @@ TextContent.propTypes = {
   title: PropTypes.string,
   src: PropTypes.string,
   to: PropTypes.string,
-  toName: PropTypes.string,
+  linkText: PropTypes.string,
   text: PropTypes.string,
-  href: PropTypes.string,
-  hrefName: PropTypes.string,
+  external: PropTypes.bool,
   banner: PropTypes.string,
 };
 

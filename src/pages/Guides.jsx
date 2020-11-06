@@ -16,10 +16,9 @@ function Guides() {
         <TextContent
           title="Guide du débutant"
           src={chibiGuide}
-          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire.
-          "
+          text="Retrouve tout plein d'astuces et des erreurs à ne pas faire."
           banner={guide}
-          toName="Lire le guide"
+          linkText="Lire le guide"
           to="/guides/debutant"
         />
       </Content>
@@ -29,7 +28,7 @@ function Guides() {
           src={chibiAbyss}
           text="Retrouve tout plein d'astuces et des erreurs à ne pas faire. "
           banner={abyss}
-          toName="Lire le guide"
+          linkText="Lire le guide"
           to="/guides/abyss"
         />
       </Content>

@@ -19,16 +19,15 @@ function Indispensables() {
       <Visual src={CurrentElement.leftChar} position="left" height="95%" />
       <Content>
         {article.map(({
-          title, text, src, hrefName, href, to, toName,
+          title, text, src, to, linkText, external,
         }) => (
           <TextContent
             title={title}
-            hrefName={hrefName}
-            href={href}
+            linkText={linkText}
             src={src}
             text={text}
             to={to}
-            toName={toName}
+            external={external}
           />
         ))}
       </Content>

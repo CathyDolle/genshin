@@ -24,8 +24,8 @@ function GuideDebutant() {
           title="Coupons"
           text="Pas de code cette semaine :("
           //   href="https://genshin.mihoyo.com/fr/gift"
-          linkName="ici"
-          target="_blank"
+          linkText="ici"
+          external
           //   src={jeanHeart}
           src={razorCry}
         />

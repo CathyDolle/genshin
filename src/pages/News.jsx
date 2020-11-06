@@ -16,8 +16,9 @@ function News() {
       <Content>
         <TextContent
           title="Nouveauté de la 1.1"
-          hrefName="▶ Regarder le trailer"
-          href="https://twitter.com/Genshin_7/status/1322148834001129473"
+          linkText="▶ Regarder le trailer"
+          to="https://twitter.com/Genshin_7/status/1322148834001129473"
+          external
           src={chibiMap}
           text="La maj est prévue pour le 11 novembre, aucune région n'a été annoncée. Pour plus d'infos :"
         />
@@ -25,7 +26,7 @@ function News() {
           title="Timer"
           text="Pour voir le temps de respawn des ressources"
           //   href="https://genshin.mihoyo.com/fr/gift"
-          toName="▶ Voir les timers"
+          linkText="▶ Voir les timers"
           to="/"
           src={chibiTimer}
         />
@@ -34,7 +35,7 @@ function News() {
           title="Test"
           text="Pour voir le temps de respawn des ressources"
           //   href="https://genshin.mihoyo.com/fr/gift"
-          toName="▶ Voir les timers"
+          linkText="▶ Voir les timers"
           to="/"
           src={chibiTimer}
         />
