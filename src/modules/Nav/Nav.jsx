@@ -3,6 +3,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import './Nav.scss';
 import colorContext from '../../contexts/element';
 import { elements } from '../../data/elementsData';
+import Theme from './Theme';
 
 const Nav = () => {
   const { current } = useContext(colorContext);
@@ -28,6 +29,7 @@ const Nav = () => {
       <NavLink to="/dailies">Dailies</NavLink>
       <NavLink to="/indispensables">Indispensables</NavLink>
       <NavLink to="/news">News</NavLink>
+      <Theme />
     </nav>
   );
 };

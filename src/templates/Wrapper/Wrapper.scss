@@ -4,7 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: var(--wrapper-margin);
+  padding: 4rem var(--wrapper-margin) 0rem var(--wrapper-margin);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,12 +34,10 @@
   .shadow {
     position: absolute;
     bottom: 0;
-    left: calc(var(--wrapper-margin) * -1);
+    left: 0;
     width: 100vw;
     height: 30%;
     pointer-events: none;
     background: var(--shadow);
   }
 }
-
-
