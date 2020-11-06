@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Genshin v4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ressources, guides et news autour du jeu Genshin Impact.
 
 ## Available Scripts
 

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Elements from './Elements/Elements';
-import { elements } from './Elements/elementsData';
+import Elements from '../../components/Elements';
+import { elements } from '../../data/elementsData';
 import './Wrapper.scss';
-import Nav from './Nav';
-import colorContext from '../contexts/element';
+import colorContext from '../../contexts/element';
+import Nav from '../../modules/Nav/Nav';
 
 const Wrapper = ({ children }) => {
   const { current } = useContext(colorContext);
