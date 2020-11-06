@@ -3,15 +3,17 @@ import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
 import TextContent from '../components/TextContent';
-
-// TEXT
-import {
-  homeTitle, homeText, codeTitle, codeText,
-} from '../text/home.json';
-
-// CONTEXT
 import colorContext from '../contexts/element';
 import { elements } from '../components/Elements/elementsData';
+
+import homeData from '../text/home';
+
+const {
+  title,
+  text,
+  codeTitle,
+  codeText,
+} = homeData;
 
 function Home() {
   const { current } = useContext(colorContext);
@@ -19,7 +21,7 @@ function Home() {
   return (
     <Wrapper>
       <Content>
-        <TextContent title={homeTitle} text={homeText} />
+        <TextContent title={title} text={text} />
         <TextContent
           title={codeTitle}
           text={codeText}

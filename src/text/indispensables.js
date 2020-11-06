@@ -2,7 +2,7 @@ import chibiTimer from '../assets/images/chibi/chibiTimer.png';
 import chibiMap from '../assets/images/chibi/chibiMap.png';
 
 const indispensable = {
-  article: [
+  posts: [
     {
       title: 'Map interactive',
       text: 'Une map interactive pour voir le spot de chaque ressource.',

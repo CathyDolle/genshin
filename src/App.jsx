@@ -3,27 +3,27 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Guides from './pages/Guides';
-import Dailies from './pages/Dailies';
-import Indispensables from './pages/Indispensables';
 import Reactions from './pages/Indispensables/Reactions';
-import News from './pages/News';
 import GuideDebutant from './pages/Debutant';
 import GuideAbyss from './pages/Abyss';
 import { ElementProvider } from './contexts/element';
 
-// responsive
 import './Responsive.scss';
+import VisualAndPostsTemplate from './templates/VisualAndPosts';
+import indispensable from './text/indispensables';
+import paimon from './assets/images/char/paimon.png';
+import xiao from './assets/images/char/xiao.png';
+import dailies from './text/dailies';
+import newsData from './text/news';
 
 function App() {
   return (
     <ElementProvider>
       <Router>
         <Switch>
-          {/* home */}
           <Route exact path="/">
             <Home />
           </Route>
-          {/* guides */}
           <Route exact path="/guides">
             <Guides />
           </Route>
@@ -33,22 +33,18 @@ function App() {
           <Route path="/guides/abyss">
             <GuideAbyss />
           </Route>
-          {/* dailies */}
           <Route path="/dailies">
-            <Dailies />
+            <VisualAndPostsTemplate visual={paimon} posts={dailies.posts} />
           </Route>
-          {/* Indispensables */}
           <Route exact path="/indispensables">
-            <Indispensables />
+            <VisualAndPostsTemplate posts={indispensable.posts} />
           </Route>
           <Route path="/indispensables/reactions">
             <Reactions />
           </Route>
-          {/* news */}
           <Route path="/news">
-            <News />
+            <VisualAndPostsTemplate visual={xiao} visualPosition="xiao" posts={newsData.posts} />
           </Route>
-
         </Switch>
       </Router>
     </ElementProvider>
