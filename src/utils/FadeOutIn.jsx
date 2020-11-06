@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import AnimatedImg from './AnimatedImg';
+import AnimatedImg from '../components/AnimatedImg';
 
 const FadeOutIn = (props) => {
   const {
