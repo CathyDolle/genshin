@@ -1,12 +1,15 @@
 @media only screen and (max-width: 1400px) {
   .wrapper {
-    padding: var(--wrapper-margin-1400);
+    padding: 4rem var(--wrapper-small-margin) 0rem var(--wrapper-small-margin);
+    .elements_container {
+      width: 8rem;
+    }
   }
 }
 
 @media screen and (min-width: 1400px) {
   .wrapper {
-    padding: var(--wrapper-margin);
+    padding: 4rem var(--wrapper-margin) 0rem var(--wrapper-margin);
   }
 }
 

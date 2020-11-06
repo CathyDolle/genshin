@@ -34,8 +34,11 @@ VARIABLES
 
   // width
   --width-text-container: 70%;
-  --wrapper-margin: 4rem 20rem 0rem 20rem;
-  --wrapper-margin-1400: 4rem 8rem 0rem 8rem;
+  --wrapper-margin: 15rem;
+  --wrapper-small-margin: 8rem;
+
+  // shadow
+  --shadow: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 [data-theme="light"] {
@@ -132,4 +135,46 @@ p {
   color: var(--p-color);
   font-size: var(--p-size);
   line-height: var(--text-line-8);
+}
+
+/***********
+ ANIMATIONS 
+ ***********/
+
+@keyframes fadeElementAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeCharAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes charAnimationRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes charAnimationLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

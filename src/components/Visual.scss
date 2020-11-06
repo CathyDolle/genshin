@@ -1,0 +1,20 @@
+.visual {
+  position: relative;
+  pointer-events: none;
+  width: 50%;
+  height: 100%;
+
+  img.right {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translate3d(50%, 0, 0);
+  }
+  img.left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate3d(-50%, 0, 0);
+    animation-fill-mode: forwards;
+  }
+}

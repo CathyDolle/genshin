@@ -1,10 +1,10 @@
 import React, { useContext, useMemo, useState } from 'react';
 import './Reactions.scss';
-import Reaction from '../../modules/Reaction/Reaction';
 import { elements } from '../../data/elementsData';
 import reactions from '../../data/reactionsData';
 import colorContext from '../../contexts/element';
 import Wrapper from '../../templates/Wrapper/Wrapper';
+import Reaction from '../../modules/Reaction/Reaction';
 
 const Reactions = () => {
   const { setColor } = useContext(colorContext);

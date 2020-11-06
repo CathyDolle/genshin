@@ -26,6 +26,23 @@ nav {
       transition: transform 0.5s;
     }
   }
+  button {
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    right: calc(var(--wrapper-margin) - 40px);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    img.mode {
+      width: 100%;
+      opacity: 0.2;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
   p {
     // margin-top: 1.5rem;
     transform: translateY(34%);

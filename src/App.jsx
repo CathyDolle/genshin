@@ -12,7 +12,7 @@ import './Responsive.scss';
 import VisualAndPostsTemplate from './templates/VisualAndPosts';
 import indispensable from './data/indispensables';
 import paimon from './assets/images/char/paimon.png';
-import xiao from './assets/images/char/xiao.png';
+import tartaglia from './assets/images/char/tartaglia.png';
 import dailies from './data/dailies';
 import newsData from './data/news';
 
@@ -43,7 +43,7 @@ function App() {
             <Reactions />
           </Route>
           <Route path="/news">
-            <VisualAndPostsTemplate visual={xiao} visualPosition="xiao" posts={newsData.posts} />
+            <VisualAndPostsTemplate visual={tartaglia} posts={newsData.posts} />
           </Route>
         </Switch>
       </Router>
