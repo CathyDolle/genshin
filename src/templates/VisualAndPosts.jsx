@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
-import TextContent from '../components/TextContent';
+import TextContent from '../modules/TextContent/TextContent';
 import colorContext from '../contexts/element';
-import { elements } from '../components/Elements/elementsData';
+import { elements } from '../data/elementsData';
+import Wrapper from './Wrapper/Wrapper';
 
 /**
  * Template for pages with character visual on the left
  * @param visual Source of visual you want to put, if not defined take
  * the visual of the current theme
  * @param posts List of posts object
+ * @param visualPosition Position of the visual
  * @return {JSX.Element}
  * @constructor
  */

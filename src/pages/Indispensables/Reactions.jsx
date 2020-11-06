@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import Wrapper from '../../components/Wrapper';
 import './Reactions.scss';
 import colorContext from '../../contexts/element';
-import ReactionSection from '../../components/ReactionSection';
-import { elements } from '../../components/Elements/elementsData';
+import ReactionSection from '../../modules/ReactionSection/ReactionSection';
+import { elements } from '../../data/elementsData';
+import Wrapper from '../../templates/Wrapper/Wrapper';
 
 const Reactions = () => {
   const { current, setColor } = useContext(colorContext);

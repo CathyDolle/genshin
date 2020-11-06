@@ -10,11 +10,11 @@ import { ElementProvider } from './contexts/element';
 
 import './Responsive.scss';
 import VisualAndPostsTemplate from './templates/VisualAndPosts';
-import indispensable from './text/indispensables';
+import indispensable from './data/indispensables';
 import paimon from './assets/images/char/paimon.png';
 import xiao from './assets/images/char/xiao.png';
-import dailies from './text/dailies';
-import newsData from './text/news';
+import dailies from './data/dailies';
+import newsData from './data/news';
 
 function App() {
   return (

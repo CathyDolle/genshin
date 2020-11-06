@@ -1,13 +1,12 @@
 import React from 'react';
-import Wrapper from '../components/Wrapper';
 import Content from '../components/Content';
-import TextContent from '../components/TextContent';
+import TextContent from '../modules/TextContent/TextContent';
 
-// CHAR
 import abyss from '../assets/images/banner/abyss.png';
 import chibiGuide from '../assets/images/chibi/chibiGuide.png';
 import chibiAbyss from '../assets/images/chibi/chibiAbyss.png';
 import guide from '../assets/images/banner/guide.png';
+import Wrapper from '../templates/Wrapper/Wrapper';
 
 function Guides() {
   return (

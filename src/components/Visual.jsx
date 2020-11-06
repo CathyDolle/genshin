@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FadeOutIn from './FadeOutIn';
+import FadeOutIn from '../utils/FadeOutIn';
 
 const Visual = ({
   src, position, height,

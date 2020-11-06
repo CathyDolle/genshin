@@ -9,18 +9,18 @@ import {
 } from 'genshin-icon';
 
 // CHARACTERE
-import jean from '../../assets/images/char/jean.png';
-import ningguang from '../../assets/images/char/ningguang.png';
-import keqing from '../../assets/images/char/keqing.png';
-import barbara from '../../assets/images/char/barbara.png';
-import diluc from '../../assets/images/char/diluc.png';
-import xiangling from '../../assets/images/char/xiangling.png';
-import chongyun from '../../assets/images/char/chongyun.png';
-import qiqi from '../../assets/images/char/qiqi.png';
-import mona from '../../assets/images/char/mona.png';
-import sucrose from '../../assets/images/char/sucrose.png';
-import fischl from '../../assets/images/char/fischl.png';
-import noelle from '../../assets/images/char/noelle.png';
+import jean from '../assets/images/char/jean.png';
+import ningguang from '../assets/images/char/ningguang.png';
+import keqing from '../assets/images/char/keqing.png';
+import barbara from '../assets/images/char/barbara.png';
+import diluc from '../assets/images/char/diluc.png';
+import xiangling from '../assets/images/char/xiangling.png';
+import chongyun from '../assets/images/char/chongyun.png';
+import qiqi from '../assets/images/char/qiqi.png';
+import mona from '../assets/images/char/mona.png';
+import sucrose from '../assets/images/char/sucrose.png';
+import fischl from '../assets/images/char/fischl.png';
+import noelle from '../assets/images/char/noelle.png';
 
 // eslint-disable-next-line import/prefer-default-export
 export const elements = [

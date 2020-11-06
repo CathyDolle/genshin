@@ -1,13 +1,12 @@
 import React from 'react';
-import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
-import TextContent from '../components/TextContent';
+import TextContent from '../modules/TextContent/TextContent';
 
-// CHAR
 import principal from '../assets/images/char/principal.png';
 import amberWow from '../assets/images/chibi/amberWow.png';
 import razorCry from '../assets/images/chibi/razorCry.png';
+import Wrapper from '../templates/Wrapper/Wrapper';
 
 function GuideDebutant() {
   return (

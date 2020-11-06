@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './TextContent.scss';
-import renderWithNextLine from '../utils/textRenderer';
-import LinkOrExternal from '../utils/LinkOrExternal';
+import renderWithNextLine from '../../utils/textRenderer';
+import LinkOrExternal from '../../utils/LinkOrExternal';
 
 const TextContent = ({
   title, src, text, to, linkText, external, banner,

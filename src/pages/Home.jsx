@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import Wrapper from '../components/Wrapper';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
-import TextContent from '../components/TextContent';
+import TextContent from '../modules/TextContent/TextContent';
 import colorContext from '../contexts/element';
-import { elements } from '../components/Elements/elementsData';
+import { elements } from '../data/elementsData';
 
-import homeData from '../text/home';
+import homeData from '../data/home';
+import Wrapper from '../templates/Wrapper/Wrapper';
 
 const {
   title,
