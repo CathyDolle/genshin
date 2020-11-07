@@ -19,30 +19,14 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/guides">
-            <Guides />
-          </Route>
-          <Route path="/guides/debutant">
-            <GuideDebutant />
-          </Route>
-          <Route path="/guides/abyss">
-            <GuideAbyss />
-          </Route>
-          <Route path="/dailies">
-            <Dailies />
-          </Route>
-          <Route exact path="/indispensables">
-            <Indispensables />
-          </Route>
-          <Route path="/indispensables/reactions">
-            <Reactions />
-          </Route>
-          <Route path="/news">
-            <News />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/guides" component={Guides} />
+          <Route path="/guides/debutant" component={GuideDebutant} />
+          <Route path="/guides/abyss" component={GuideAbyss} />
+          <Route path="/dailies" component={Dailies} />
+          <Route exact path="/indispensables" component={Indispensables} />
+          <Route path="/indispensables/reactions" component={Reactions} />
+          <Route path="/news" component={News} />
         </Switch>
       </Router>
     </Provider>
