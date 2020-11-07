@@ -13,13 +13,13 @@ const newsSlice = createSlice({
     builder.addCase(getNews.fulfilled, (state, action) => {
       newsAdapter.setAll(state, action.payload);
       state.newsStatus = 'fulfilled';
-    });
-    builder.addCase(getNews.pending, (state) => {
-      state.newsStatus = 'pending';
-    });
-    builder.addCase(getNews.rejected, (state) => {
-      state.newsStatus = 'rejected';
-    });
+    })
+      .addCase(getNews.pending, (state) => {
+        state.newsStatus = 'pending';
+      })
+      .addCase(getNews.rejected, (state) => {
+        state.newsStatus = 'rejected';
+      });
   },
 });
 

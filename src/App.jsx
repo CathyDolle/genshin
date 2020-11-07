@@ -7,14 +7,11 @@ import Guides from './pages/Guides';
 import Reactions from './pages/Indispensables/Reactions';
 import GuideDebutant from './pages/Debutant';
 import GuideAbyss from './pages/Abyss';
+import News from './pages/News';
+import Indispensables from './pages/Indispensables';
+import Dailies from './pages/dailies';
 
 import './Responsive.scss';
-import VisualAndPostsTemplate from './templates/VisualAndPosts';
-import indispensable from './data/indispensables';
-import paimon from './assets/images/char/paimon.png';
-import tartaglia from './assets/images/char/tartaglia.png';
-import dailies from './data/dailies';
-import newsData from './data/news';
 import store from './redux/store';
 
 function App() {
@@ -22,30 +19,14 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/guides">
-            <Guides />
-          </Route>
-          <Route path="/guides/debutant">
-            <GuideDebutant />
-          </Route>
-          <Route path="/guides/abyss">
-            <GuideAbyss />
-          </Route>
-          <Route path="/dailies">
-            <VisualAndPostsTemplate visual={paimon} posts={dailies.posts} />
-          </Route>
-          <Route exact path="/indispensables">
-            <VisualAndPostsTemplate posts={indispensable.posts} />
-          </Route>
-          <Route path="/indispensables/reactions">
-            <Reactions />
-          </Route>
-          <Route path="/news">
-            <VisualAndPostsTemplate visual={tartaglia} posts={newsData.posts} />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/guides" component={Guides} />
+          <Route path="/guides/debutant" component={GuideDebutant} />
+          <Route path="/guides/abyss" component={GuideAbyss} />
+          <Route path="/dailies" component={Dailies} />
+          <Route exact path="/indispensables" component={Indispensables} />
+          <Route path="/indispensables/reactions" component={Reactions} />
+          <Route path="/news" component={News} />
         </Switch>
       </Router>
     </Provider>
