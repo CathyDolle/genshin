@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
 import { elements } from '../data/elementsData';
 import Wrapper from './Wrapper/Wrapper';
 import TextContent from '../modules/TextContent/TextContent';
-import getNews from '../redux/thunks/getNews';
-import { selectAllNews } from '../redux/newsSlice';
 
 /**
  * Template for pages with character visual on the left
@@ -19,28 +17,20 @@ import { selectAllNews } from '../redux/newsSlice';
  * @constructor
  */
 const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
-  const dispatch = useDispatch();
   const element = useSelector((state) => state.app.element);
   const CurrentElement = elements.find(({ name }) => element === name);
-  const news = useSelector(selectAllNews);
-
-  // eslint-disable-next-line no-console
-  console.log(news);
-  useEffect(() => {
-    dispatch(getNews());
-  }, []);
 
   return (
     <Wrapper>
       <Visual src={visual || CurrentElement.leftChar} position={visualPosition} height="95%" />
       <Content>
         {posts.map(({
-          title, src, to, linkText, text,
+          title, image, to, linkText, text,
         }) => (
           <TextContent
             title={title}
             linkText={linkText}
-            src={src}
+            src={`https://genshin.cchampou.me${image.url}`}
             text={text}
             to={to}
           />
@@ -49,16 +39,6 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
     </Wrapper>
   );
 };
-
-/*
-<TextContent
-title={title}
-linkText={linkText}
-src={`https://genshin.cchampou.me${image.url}`}
-text={text}
-to={to}
-/>
-*/
 
 VisualAndPostsTemplate.defaultProps = {
   visual: null,

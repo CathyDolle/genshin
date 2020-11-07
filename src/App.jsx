@@ -7,14 +7,13 @@ import Guides from './pages/Guides';
 import Reactions from './pages/Indispensables/Reactions';
 import GuideDebutant from './pages/Debutant';
 import GuideAbyss from './pages/Abyss';
+import News from './pages/News';
 
 import './Responsive.scss';
 import VisualAndPostsTemplate from './templates/VisualAndPosts';
 import indispensable from './data/indispensables';
 import paimon from './assets/images/char/paimon.png';
-import tartaglia from './assets/images/char/tartaglia.png';
 import dailies from './data/dailies';
-import newsData from './data/news';
 import store from './redux/store';
 
 function App() {
@@ -44,7 +43,7 @@ function App() {
             <Reactions />
           </Route>
           <Route path="/news">
-            <VisualAndPostsTemplate visual={tartaglia} posts={newsData.posts} />
+            <News />
           </Route>
         </Switch>
       </Router>
