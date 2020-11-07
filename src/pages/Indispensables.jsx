@@ -6,14 +6,14 @@ import VisualAndPostsTemplate from '../templates/VisualAndPosts';
 
 const Indispensables = () => {
   const dispatch = useDispatch();
-  const Articles = useSelector(selectAllIndispensableArticle);
+  const articles = useSelector(selectAllIndispensableArticle);
 
   useEffect(() => {
     dispatch(getIndispensable());
   }, []);
 
   return (
-    <VisualAndPostsTemplate posts={Articles} />
+    <VisualAndPostsTemplate posts={articles} />
   );
 };
 

@@ -7,8 +7,8 @@ import dailiesSlice from './dailiesSlice';
 const rootReducer = combineReducers({
   app: appSlice.reducer,
   news: newsSlice.reducer,
-  indispensable: indispensableSlice,
-  dailies: dailiesSlice,
+  indispensable: indispensableSlice.reducer,
+  dailies: dailiesSlice.reducer,
 });
 
 const store = configureStore({
