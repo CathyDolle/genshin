@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Home from './pages/Home';
 import Guides from './pages/Guides';
 import Reactions from './pages/Indispensables/Reactions';
 import GuideDebutant from './pages/Debutant';
 import GuideAbyss from './pages/Abyss';
-import { ElementProvider } from './contexts/element';
 
 import './Responsive.scss';
 import VisualAndPostsTemplate from './templates/VisualAndPosts';
@@ -15,10 +15,11 @@ import paimon from './assets/images/char/paimon.png';
 import tartaglia from './assets/images/char/tartaglia.png';
 import dailies from './data/dailies';
 import newsData from './data/news';
+import store from './redux/store';
 
 function App() {
   return (
-    <ElementProvider>
+    <Provider store={store}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -47,7 +48,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </ElementProvider>
+    </Provider>
   );
 }
 

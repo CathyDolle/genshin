@@ -1,11 +1,14 @@
 import React, { useMemo, useState } from 'react';
 import './Reactions.scss';
+import { useDispatch } from 'react-redux';
 import { elements } from '../../data/elementsData';
 import reactions from '../../data/reactionsData';
 import Wrapper from '../../templates/Wrapper/Wrapper';
 import Reaction from '../../modules/Reaction/Reaction';
+import { setElement } from '../../redux/appSlice';
 
 const Reactions = () => {
+  const dispatch = useDispatch();
   const [currentFocusElement, setCurrentFocusElement] = useState([]);
 
   const availableReactions = useMemo(() => {
@@ -16,6 +19,7 @@ const Reactions = () => {
   }, [currentFocusElement]);
 
   const handleClick = (element) => {
+    dispatch(setElement(element.name));
     setCurrentFocusElement([element]);
   };
 

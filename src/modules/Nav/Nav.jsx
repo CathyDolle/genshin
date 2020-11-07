@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './Nav.scss';
-import colorContext from '../../contexts/element';
+import { useSelector } from 'react-redux';
 import { elements } from '../../data/elementsData';
 import Theme from './Theme';
 
 const Nav = () => {
-  const { current } = useContext(colorContext);
-  const CurrentElement = elements.find(({ name }) => current === name);
+  const element = useSelector((state) => state.app.element);
+  const CurrentElement = elements.find(({ name }) => element === name);
   const history = useHistory();
 
   const handleClick = () => {
@@ -16,12 +16,14 @@ const Nav = () => {
 
   return (
     <nav>
+      {CurrentElement && (
       <CurrentElement.Component
         className="logo"
         size="40"
         color={CurrentElement.color}
         onClick={handleClick}
       />
+      )}
       <NavLink exact to="/">
         Home
       </NavLink>
