@@ -4,9 +4,10 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 4% 0 4%;
+  margin-bottom: 8rem;
   .border {
     width: 30%;
-    height: 4rem;
+    height: 5rem;
     border-top: solid 0.1rem var(--h1-color);
     &_left {
       border-left: solid 0.1rem var(--h1-color);
@@ -15,18 +16,35 @@
       border-right: solid 0.1rem var(--h1-color);
     }
   }
+  .multiple_element{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
   .reaction {
-    height: 4rem;
     margin-top: -2rem;
     width: 40%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .duo_reaction{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        color: var(--h1-color);
+        font-size: 1.5rem;
+        margin: 0 1rem;
+      }
+    }
+    h2{
+      margin-top: 1rem;
+    }
   }
   p {
-    margin-top: 1rem;
+    margin: 1rem 0 2rem 0;
     text-align: center;
   }
 }
