@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector, useStore } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
@@ -20,13 +20,11 @@ import { selectAllNews } from '../redux/newsSlice';
  */
 const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
   const dispatch = useDispatch();
-  const store = useStore();
   const element = useSelector((state) => state.app.element);
   const CurrentElement = elements.find(({ name }) => element === name);
+  const news = useSelector(selectAllNews);
 
-  const news = selectAllNews(store.getState());
   console.log(news);
-
   useEffect(() => {
     dispatch(getNews());
   }, []);
@@ -36,7 +34,7 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
       <Visual src={visual || CurrentElement.leftChar} position={visualPosition} height="95%" />
       <Content>
         {posts.map(({
-          title, text, src, to, linkText,
+          title, src, to, linkText, text,
         }) => (
           <TextContent
             title={title}
@@ -50,6 +48,16 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
     </Wrapper>
   );
 };
+
+/*
+<TextContent
+title={title}
+linkText={linkText}
+src={`https://genshin.cchampou.me${image.url}`}
+text={text}
+to={to}
+/>
+*/
 
 VisualAndPostsTemplate.defaultProps = {
   visual: null,
