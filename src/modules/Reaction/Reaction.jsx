@@ -15,26 +15,47 @@ const Reaction = ({
   return (
     <div className="reaction_container">
       <div className="border border_left" />
-      <primaryComponent.Component
-        className="logo"
-        size="40"
-        color={primaryComponent.color}
-      />
       <div className="reaction">
+        <div className="duo_reaction">
+          <primaryComponent.Component
+            className="primary_reaction"
+            size="40"
+            color={primaryComponent.color}
+          />
+          {otherElements.length < 2
+          && (
+          <>
+            <span>+</span>
+            {otherElements.map((el) => (
+              <el.Component
+                key={el.name}
+                size="40"
+                color={el.color}
+              />
+            ))}
+          </>
+          )}
+        </div>
         <h2>{name}</h2>
       </div>
       <div className="border border_right" />
       <p>
         {description}
-        {otherElements.map((el) => (
-          <el.Component
-            key={el.name}
-            className="logo"
-            size="40"
-            color={el.color}
-          />
-        ))}
       </p>
+      <div className="multiple_element">
+        {otherElements.length > 1
+          && (
+          <>
+            {otherElements.map((el) => (
+              <el.Component
+                key={el.name}
+                size="40"
+                color={el.color}
+              />
+            ))}
+          </>
+          )}
+      </div>
     </div>
   );
 };

@@ -7,6 +7,9 @@
   animation-name: fadeAnimation;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  &:last-child{
+    margin-bottom: 0.7rem;
+  }
   &_section {
     width: 100%;
     display: flex;

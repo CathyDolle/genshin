@@ -2,11 +2,25 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
+}
+
+.rcs-custom-scroll {
   width: 50%;
-  height: 55%;
-  //   padding-bottom: 10rem;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  transform: translate3d(-20px, 0, 0);
+}
+
+.rcs-custom-scrollbar {
+  left: 0;
+}
+
+.rcs-inner-container > div {
+  margin-left: 2.5rem;
+  margin-right: 0 !important;
+}
+
+.rcs-inner-handle {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  width: 0.3rem;
+  // margin-left: 1.5px;
 }

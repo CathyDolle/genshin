@@ -36,7 +36,8 @@
   .reactions_section {
     width: 100%;
     margin-top: 5%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
