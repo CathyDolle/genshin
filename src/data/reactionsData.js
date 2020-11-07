@@ -1,69 +1,57 @@
-import {
-  Anemo,
-  Geo,
-  Electro,
-  Dendro,
-  Hydro,
-  Pyro,
-  Cryo,
-} from 'genshin-icon';
-
 const reactions = [
   {
-    Element: Anemo,
-    color: 'var(--anemo-color)',
-    Reaction: {
-      Swirl: [Pyro, Hydro, Cryo, Electro],
-    },
+    name: 'Swirl',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['anemo'],
+    types: ['pyro', 'hydro', 'cryo', 'electro', 'anemo'],
   },
   {
-    Element: Geo,
-    color: 'var(--geo-color)',
-    Reaction: {
-      Crystallize: [Pyro, Hydro, Cryo, Electro],
-    },
+    name: 'Crystallize',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['geo'],
+    types: ['pyro', 'hydro', 'cryo', 'electro', 'geo'],
   },
   {
-    Element: Electro,
-    color: 'var(--electro-color)',
-    Electrocution: [Electro, Hydro],
-    Superconduct: [Electro, Cryo],
-    Overload: [Electro, Pyro],
+    name: 'Electrocution',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['hydro', 'electro'],
+    types: ['hydro', 'electro'],
   },
   {
-    Element: Dendro,
-    color: 'var(--dendro-color)',
-    Reaction: {
-      Burning: [Dendro, Pyro],
-    },
+    name: 'Superconduct',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['cryo', 'electro'],
+    types: ['cryo', 'electro'],
   },
   {
-    Element: Hydro,
-    color: 'var(--hydro-color)',
-    Reaction: {
-      Electrocution: [Hydro, Electro],
-      Vaporize: [Hydro, Pyro],
-      Freeze: [Hydro, Cryo],
-    },
+    name: 'Overload',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['pyro', 'electro'],
+    types: ['pyro', 'electro'],
   },
   {
-    Element: Pyro,
-    color: 'var(--pyro-color)',
-    Reaction: {
-      Melt: [Pyro, Cryo],
-      Burning: [Pyro, Dendro],
-      Vaporize: [Pyro, Hydro],
-      Overload: [Pyro, Electro],
-    },
+    name: 'Burning',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['pyro', 'dendro'],
+    types: ['pyro', 'dendro'],
   },
   {
-    Element: Cryo,
-    color: 'var(--cryo-color)',
-    Reaction: {
-      Melt: [Cryo, Pyro],
-      Superconduct: [Cryo, Electro],
-      Freeze: [Cryo, Hydro],
-    },
+    name: 'Vaporize',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['pyro', 'hydro'],
+    types: ['pyro', 'hydro'],
+  },
+  {
+    name: 'Freeze',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['cryo', 'hydro'],
+    types: ['cryo', 'hydro'],
+  },
+  {
+    name: 'Melt',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis porttitor sapien',
+    search: ['cryo', 'pyro'],
+    types: ['cryo', 'pyro'],
   },
 ];
 

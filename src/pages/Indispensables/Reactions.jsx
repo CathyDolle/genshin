@@ -1,32 +1,52 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import './Reactions.scss';
-import colorContext from '../../contexts/element';
-import ReactionSection from '../../modules/ReactionSection/ReactionSection';
 import { elements } from '../../data/elementsData';
+import reactions from '../../data/reactionsData';
+import colorContext from '../../contexts/element';
 import Wrapper from '../../templates/Wrapper/Wrapper';
+import Reaction from '../../modules/Reaction/Reaction';
 
 const Reactions = () => {
-  const { current, setColor } = useContext(colorContext);
+  const { setColor } = useContext(colorContext);
+  const [currentFocusElement, setCurrentFocusElement] = useState([]);
+
+  const availableReactions = useMemo(() => {
+    const allElementsSelected = currentFocusElement.map((ele) => ele.name);
+
+    return allElementsSelected.length > 0 ? reactions
+      .filter((reaction) => allElementsSelected.every((ele) => reaction.search.includes(ele))) : [];
+  }, [currentFocusElement]);
+
+  const handleClick = (element) => {
+    setColor(element.name);
+    setCurrentFocusElement([element]);
+  };
 
   return (
     <Wrapper>
       <section className="reactions_container">
         <h1>Choose an element</h1>
         <div className="element_section">
-          {elements.map(({ Component, color, name }) => (
-            <Component
-              key={color}
-              className={`elements ${current === name ? '' : ' elements_inactive'}`}
-              onClick={() => setColor(name)}
+          {elements.map((element) => (
+            <element.Component
+              key={element.name}
+              className={`elements ${currentFocusElement.some((ele) => ele.name === element.name) ? '' : ' elements_inactive'}`}
+              onClick={() => handleClick(element)}
               size="45"
-              color={color}
+              color={element.color}
             />
           ))}
         </div>
         <div className="reactions_section">
-          <ReactionSection />
-          <ReactionSection />
-          <ReactionSection />
+          {availableReactions && availableReactions.map((element) => (
+            <Reaction
+              key={element.name}
+              name={element.name}
+              description={element.description}
+              primaryComponent={currentFocusElement[0]}
+              types={element.types}
+            />
+          ))}
         </div>
       </section>
     </Wrapper>
