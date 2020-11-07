@@ -8,13 +8,13 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate3d(50%, 0, 0);
+    // transform: translate3d(50%, 0, 0);
   }
   img.left {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate3d(-50%, 0, 0);
-    animation-fill-mode: forwards;
+    // transform: translate3d(-50%, 0, 0);
+    // animation-fill-mode: forwards;
   }
 }
