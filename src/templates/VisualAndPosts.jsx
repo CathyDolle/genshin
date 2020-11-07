@@ -24,6 +24,7 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
   const CurrentElement = elements.find(({ name }) => element === name);
   const news = useSelector(selectAllNews);
 
+  // eslint-disable-next-line no-console
   console.log(news);
   useEffect(() => {
     dispatch(getNews());
