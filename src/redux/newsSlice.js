@@ -7,19 +7,19 @@ const newsAdapter = createEntityAdapter({
 
 const newsSlice = createSlice({
   name: 'news',
-  initialState: newsAdapter.getInitialState({ newsStatus: 'empty' }),
+  initialState: newsAdapter.getInitialState({ newsStatus: 'none' }),
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getNews.fulfilled, (state, action) => {
-      newsAdapter.setAll(action.payload);
+      newsAdapter.setAll(state, action.payload);
       state.newsStatus = 'fulfilled';
     });
-    // [getNews.rejected]: (state) => {
-    //   state.newsStatus = 'rejected';
-    // },
-    // [getNews.pending]: (state) => {
-    //   state.newsStatus = 'pending';
-    // },
+    builder.addCase(getNews.pending, (state) => {
+      state.newsStatus = 'pending';
+    });
+    builder.addCase(getNews.rejected, (state) => {
+      state.newsStatus = 'rejected';
+    });
   },
 });
 

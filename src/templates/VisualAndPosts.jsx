@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import PropTypes from 'prop-types';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
@@ -8,6 +8,7 @@ import Wrapper from './Wrapper/Wrapper';
 import TextContent from '../modules/TextContent/TextContent';
 import getNews from '../redux/thunks/getNews';
 import { selectAllNews } from '../redux/newsSlice';
+
 /**
  * Template for pages with character visual on the left
  * @param visual Source of visual you want to put, if not defined take
@@ -19,10 +20,11 @@ import { selectAllNews } from '../redux/newsSlice';
  */
 const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
   const dispatch = useDispatch();
+  const store = useStore();
   const element = useSelector((state) => state.app.element);
   const CurrentElement = elements.find(({ name }) => element === name);
 
-  const news = selectAllNews();
+  const news = selectAllNews(store.getState());
   console.log(news);
 
   useEffect(() => {
