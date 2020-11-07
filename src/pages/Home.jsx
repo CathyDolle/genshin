@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Visual from '../components/Visual';
 import Content from '../components/Content';
 import TextContent from '../modules/TextContent/TextContent';
-import colorContext from '../contexts/element';
 import { elements } from '../data/elementsData';
 
 import homeData from '../data/home';
@@ -16,8 +16,9 @@ const {
 } = homeData;
 
 function Home() {
-  const { current } = useContext(colorContext);
-  const CurrentElement = elements.find(({ name }) => current === name);
+  const element = useSelector((state) => state.app.element);
+  const CurrentElement = elements.find(({ name }) => element === name);
+
   return (
     <Wrapper>
       <Content>
@@ -31,7 +32,7 @@ function Home() {
           // src={razorCry}
         />
       </Content>
-      <Visual src={CurrentElement.char} position="right" height="100%" />
+      {CurrentElement && <Visual src={CurrentElement.char} position="right" height="100%" />}
     </Wrapper>
   );
 }
