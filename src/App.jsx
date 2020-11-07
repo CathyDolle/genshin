@@ -8,12 +8,10 @@ import Reactions from './pages/Indispensables/Reactions';
 import GuideDebutant from './pages/Debutant';
 import GuideAbyss from './pages/Abyss';
 import News from './pages/News';
+import Indispensables from './pages/Indispensables';
+import Dailies from './pages/dailies';
 
 import './Responsive.scss';
-import VisualAndPostsTemplate from './templates/VisualAndPosts';
-import indispensable from './data/indispensables';
-import paimon from './assets/images/char/paimon.png';
-import dailies from './data/dailies';
 import store from './redux/store';
 
 function App() {
@@ -34,10 +32,10 @@ function App() {
             <GuideAbyss />
           </Route>
           <Route path="/dailies">
-            <VisualAndPostsTemplate visual={paimon} posts={dailies.posts} />
+            <Dailies />
           </Route>
           <Route exact path="/indispensables">
-            <VisualAndPostsTemplate posts={indispensable.posts} />
+            <Indispensables />
           </Route>
           <Route path="/indispensables/reactions">
             <Reactions />
