@@ -13,13 +13,13 @@ const dailiesSlice = createSlice({
     builder.addCase(getDailies.fulfilled, (state, action) => {
       dailiesAdapter.setAll(state, action.payload);
       state.dailiesStatus = 'fulfilled';
-    });
-    builder.addCase(getDailies.pending, (state) => {
-      state.dailiesStatus = 'pending';
-    });
-    builder.addCase(getDailies.rejected, (state) => {
-      state.dailiesStatus = 'rejected';
-    });
+    })
+      .addCase(getDailies.pending, (state) => {
+        state.dailiesStatus = 'pending';
+      })
+      .addCase(getDailies.rejected, (state) => {
+        state.dailiesStatus = 'rejected';
+      });
   },
 });
 

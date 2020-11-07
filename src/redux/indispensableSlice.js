@@ -13,13 +13,13 @@ const indispensableSlice = createSlice({
     builder.addCase(getIndispensable.fulfilled, (state, action) => {
       articleAdapter.setAll(state, action.payload);
       state.articleStatus = 'fulfilled';
-    });
-    builder.addCase(getIndispensable.pending, (state) => {
-      state.articleStatus = 'pending';
-    });
-    builder.addCase(getIndispensable.rejected, (state) => {
-      state.articleStatus = 'rejected';
-    });
+    })
+      .addCase(getIndispensable.pending, (state) => {
+        state.articleStatus = 'pending';
+      })
+      .addCase(getIndispensable.rejected, (state) => {
+        state.articleStatus = 'rejected';
+      });
   },
 });
 
