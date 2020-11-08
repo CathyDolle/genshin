@@ -7,6 +7,9 @@ module.exports = {
   extends: 'airbnb',
   globals: {
     Atomics: 'readonly',
+    describe: 'readonly',
+    it: 'readonly',
+    expect: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {

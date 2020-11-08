@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './TextContent.scss';
-import renderWithNextLine from '../../utils/textRenderer';
+import RenderWithNextLine from '../../utils/TextRenderer';
 import LinkOrExternal from '../../utils/LinkOrExternal';
 
 const TextContent = ({
   title, src, text, to, linkText, banner,
 }) => (
   <section className="text_container">
-    <h1>{renderWithNextLine(title)}</h1>
+    <h1>{RenderWithNextLine(title)}</h1>
     <div className="text_container_section">
       {src && <img src={src} alt="chibi" />}
       <p>
-        {renderWithNextLine(text)}
+        {RenderWithNextLine(text)}
         {to && <LinkOrExternal to={to}>{linkText}</LinkOrExternal>}
       </p>
     </div>
