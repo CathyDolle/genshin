@@ -13,6 +13,7 @@ import Dailies from './pages/dailies';
 
 import './Responsive.scss';
 import store from './redux/store';
+import Articles from './pages/Articles';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/indispensables" component={Indispensables} />
           <Route path="/indispensables/reactions" component={Reactions} />
           <Route path="/news" component={News} />
+          <Route path="/article/:slug" component={Articles} />
         </Switch>
       </Router>
     </Provider>

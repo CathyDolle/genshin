@@ -1,17 +1,17 @@
 import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
 import getIndispensable from './thunks/getIndispensable';
 
-const articleAdapter = createEntityAdapter({
+const indispensableAdapter = createEntityAdapter({
   selectId: (article) => article.id,
 });
 
 const indispensableSlice = createSlice({
   name: 'indispensable',
-  initialState: articleAdapter.getInitialState({ articleStatus: 'none' }),
+  initialState: indispensableAdapter.getInitialState({ articleStatus: 'none' }),
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getIndispensable.fulfilled, (state, action) => {
-      articleAdapter.setAll(state, action.payload);
+      indispensableAdapter.setAll(state, action.payload);
       state.articleStatus = 'fulfilled';
     })
       .addCase(getIndispensable.pending, (state) => {
@@ -25,7 +25,7 @@ const indispensableSlice = createSlice({
 
 const {
   selectAll: selectAllIndispensableArticle,
-} = articleAdapter.getSelectors((state) => state.indispensable);
+} = indispensableAdapter.getSelectors((state) => state.indispensable);
 
 export { selectAllIndispensableArticle };
 export default indispensableSlice;
