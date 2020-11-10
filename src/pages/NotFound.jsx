@@ -1,9 +1,10 @@
 import React from 'react';
 import Wrapper from '../templates/Wrapper/Wrapper';
+import NotFoundAtom from '../components/NotFound';
 
 const NotFound = () => (
   <Wrapper>
-    <h1>Cette page est introuvables</h1>
+    <NotFoundAtom />
   </Wrapper>
 );
 
