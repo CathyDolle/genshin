@@ -33,3 +33,8 @@
   from = "/news"
   to = "/"
   status = 200
+
+[[redirects]]
+  from = "/article/*"
+  to = "/"
+  status = 200
