@@ -3,18 +3,29 @@ import { elements } from '../data/elementsData';
 
 const appSlice = createSlice({
   name: 'app',
-  initialState: { element: 'anemo' },
+  initialState: { element: 'anemo', light: false },
   reducers: {
     setElement: (state, action) => {
       const cssValue = elements.find(({ name }) => name === action.payload);
       document.documentElement.style.setProperty('--active', cssValue.color);
       return { ...state, element: action.payload };
     },
+    setLight: (state, { payload: light }) => {
+      if (light) {
+        document.documentElement.className = 'light';
+      } else {
+        document.documentElement.className = '';
+      }
+      return {
+        ...state,
+        light,
+      };
+    },
   },
 });
 
-const { setElement } = appSlice.actions;
+const { setElement, setLight } = appSlice.actions;
 
-export { setElement };
+export { setElement, setLight };
 
 export default appSlice;
