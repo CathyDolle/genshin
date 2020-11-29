@@ -6,20 +6,20 @@
   </defs>
   <g id="day" clip-path="url(#clip-day)">
     <g id="Groupe_113" data-name="Groupe 113" transform="translate(-13006 563)">
-      <circle id="Ellipse_32" data-name="Ellipse 32" cx="106" cy="106" r="106" transform="translate(13100 -469)" fill="#fff"/>
-      <path id="Polygone_3" data-name="Polygone 3" d="M12,0,24,76H0Z" transform="translate(13195 -563)" fill="#fff"/>
-      <path id="Polygone_4" data-name="Polygone 4" d="M12,0,24,76H0Z" transform="translate(13217 -163) rotate(180)" fill="#fff"/>
-      <path id="Polygone_5" data-name="Polygone 5" d="M12,0,24,76H0Z" transform="translate(13406 -374) rotate(90)" fill="#fff"/>
-      <path id="Polygone_6" data-name="Polygone 6" d="M12,0,24,76H0Z" transform="translate(13006 -350) rotate(-90)" fill="#fff"/>
+      <circle id="Ellipse_32" data-name="Ellipse 32" cx="106" cy="106" r="106" transform="translate(13100 -469)" fill="#000"/>
+      <path id="Polygone_3" data-name="Polygone 3" d="M12,0,24,76H0Z" transform="translate(13195 -563)" fill="#000"/>
+      <path id="Polygone_4" data-name="Polygone 4" d="M12,0,24,76H0Z" transform="translate(13217 -163) rotate(180)" fill="#000"/>
+      <path id="Polygone_5" data-name="Polygone 5" d="M12,0,24,76H0Z" transform="translate(13406 -374) rotate(90)" fill="#000"/>
+      <path id="Polygone_6" data-name="Polygone 6" d="M12,0,24,76H0Z" transform="translate(13006 -350) rotate(-90)" fill="#000"/>
       <g id="Groupe_112" data-name="Groupe 112" transform="translate(13044.203 -523.351)">
-        <path id="Polygone_7" data-name="Polygone 7" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.545, -0.839, 0.839, 0.545, 0, 77.035)" fill="#fff"/>
-        <path id="Polygone_14" data-name="Polygone 14" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.545, -0.839, 0.839, -0.545, 13.112, 266.271)" fill="#fff"/>
-        <path id="Polygone_9" data-name="Polygone 9" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.545, 0.839, -0.839, 0.545, 311.457, 56.844)" fill="#fff"/>
-        <path id="Polygone_11" data-name="Polygone 11" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.545, 0.839, -0.839, -0.545, 324.568, 246.081)" fill="#fff"/>
-        <path id="Polygone_8" data-name="Polygone 8" d="M12.037,0,24.074,57.407H0Z" transform="translate(57.064 12.757) rotate(-32)" fill="#fff"/>
-        <path id="Polygone_13" data-name="Polygone 13" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.848, -0.53, 0.53, -0.848, 77.48, 323.116)" fill="#fff"/>
-        <path id="Polygone_10" data-name="Polygone 10" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.848, 0.53, -0.53, 0.848, 247.089, 0)" fill="#fff"/>
-        <path id="Polygone_12" data-name="Polygone 12" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.848, 0.53, -0.53, -0.848, 267.504, 310.359)" fill="#fff"/>
+        <path id="Polygone_7" data-name="Polygone 7" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.545, -0.839, 0.839, 0.545, 0, 77.035)" fill="#000"/>
+        <path id="Polygone_14" data-name="Polygone 14" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.545, -0.839, 0.839, -0.545, 13.112, 266.271)" fill="#000"/>
+        <path id="Polygone_9" data-name="Polygone 9" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.545, 0.839, -0.839, 0.545, 311.457, 56.844)" fill="#000"/>
+        <path id="Polygone_11" data-name="Polygone 11" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.545, 0.839, -0.839, -0.545, 324.568, 246.081)" fill="#000"/>
+        <path id="Polygone_8" data-name="Polygone 8" d="M12.037,0,24.074,57.407H0Z" transform="translate(57.064 12.757) rotate(-32)" fill="#000"/>
+        <path id="Polygone_13" data-name="Polygone 13" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.848, -0.53, 0.53, -0.848, 77.48, 323.116)" fill="#000"/>
+        <path id="Polygone_10" data-name="Polygone 10" d="M12.037,0,24.074,57.407H0Z" transform="matrix(0.848, 0.53, -0.53, 0.848, 247.089, 0)" fill="#000"/>
+        <path id="Polygone_12" data-name="Polygone 12" d="M12.037,0,24.074,57.407H0Z" transform="matrix(-0.848, 0.53, -0.53, -0.848, 267.504, 310.359)" fill="#000"/>
       </g>
     </g>
   </g>
