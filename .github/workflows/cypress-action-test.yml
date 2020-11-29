@@ -1,9 +1,12 @@
 name: cypress-action-test
 on: [push]
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-16.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm start
