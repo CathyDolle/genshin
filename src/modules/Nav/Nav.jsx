@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
-import './Nav.scss';
 import { useSelector } from 'react-redux';
+import { NavLink, useHistory } from 'react-router-dom';
+
+import './Nav.scss';
 import { elements } from '../../data/elementsData';
 import Theme from './Theme';
+import { getElementData } from '../../redux/appSlice';
 
 const Nav = () => {
-  const element = useSelector((state) => state.app.element);
+  const element = useSelector(getElementData);
   const CurrentElement = elements.find(({ name }) => element === name);
   const history = useHistory();
 

@@ -25,7 +25,7 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
       <Visual src={visual || CurrentElement.leftChar} position={visualPosition} height="95%" />
       <Content>
         {posts.map(({
-          title, image, to, linkText, text,
+          id, title, image, to, linkText, text,
         }) => (
           <TextContent
             title={title}
@@ -33,6 +33,7 @@ const VisualAndPostsTemplate = ({ visual, visualPosition, posts }) => {
             src={`https://genshin.cchampou.me${image.url}`}
             text={text}
             to={to}
+            key={id}
           />
         ))}
       </Content>

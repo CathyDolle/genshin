@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import night from '../../assets/images/logo/night.svg';
 import day from '../../assets/images/logo/day.svg';
-import { setLight } from '../../redux/appSlice';
+import { setLight, getLightTheme } from '../../redux/appSlice';
 
 const Theme = () => {
-  const light = useSelector((state) => state.app.light);
+  const light = useSelector(getLightTheme);
   const dispatch = useDispatch();
 
   const toggleTheme = () => {

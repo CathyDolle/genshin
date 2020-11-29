@@ -7,6 +7,7 @@ import { elements } from '../data/elementsData';
 
 import homeData from '../data/home';
 import Wrapper from '../templates/Wrapper/Wrapper';
+import { getElementData } from '../redux/appSlice';
 
 const {
   title,
@@ -16,7 +17,7 @@ const {
 } = homeData;
 
 function Home() {
-  const element = useSelector((state) => state.app.element);
+  const element = useSelector(getElementData);
   const CurrentElement = elements.find(({ name }) => element === name);
 
   return (

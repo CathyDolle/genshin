@@ -24,6 +24,11 @@ const appSlice = createSlice({
   },
 });
 
+const local = (state) => state.app;
+
+export const getElementData = (state) => local(state).element;
+export const getLightTheme = (state) => local(state).light;
+
 const { setElement, setLight } = appSlice.actions;
 
 export { setElement, setLight };
