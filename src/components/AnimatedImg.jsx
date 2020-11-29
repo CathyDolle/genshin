@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const AnimatedImg = (props) => {
-  const {
-    animationName, style, animationDuration, alt, src, className, onAnimationEnd, height,
-  } = props;
-
+const AnimatedImg = ({
+  animationName, style, animationDuration, alt, src, className, onAnimationEnd, height,
+}) => {
   useEffect(() => {
     const timeoutId = setTimeout(onAnimationEnd, animationDuration);
     return () => {
